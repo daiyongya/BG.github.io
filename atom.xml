@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://daiyongya.github.io/"/>
-  <updated>2017-06-24T14:40:59.792Z</updated>
+  <updated>2017-06-24T14:46:51.062Z</updated>
   <id>https://daiyongya.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://daiyongya.github.io/2017/06/24/%E5%AF%86%E7%A0%81%E8%B4%A7%E5%B8%81%E6%A6%82%E8%BF%B0/"/>
     <id>https://daiyongya.github.io/2017/06/24/密码货币概述/</id>
     <published>2017-06-24T14:08:22.000Z</published>
-    <updated>2017-06-24T14:40:59.792Z</updated>
+    <updated>2017-06-24T14:46:51.062Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="密码学之哈希函数"><a href="#密码学之哈希函数" class="headerlink" title="密码学之哈希函数"></a>密码学之哈希函数</h2><p><strong>定义</strong>：输入为任意位数数值，经过某一函数后，输出为固定位数数值，这个函数必须具有以下三大特性：</p>
