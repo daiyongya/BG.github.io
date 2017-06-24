@@ -95,17 +95,17 @@
 
 
 
-<meta name="description" content="中心化相关问题 谁来维护交易账本； 谁来审核交易的有效性； 谁来造币； 谁来制定系统变化规则； 如何取得交易价值；">
+<meta name="description" content="比特币的交易每笔交易包括输入、输出和唯一的识别ID，其中造币交易没有输入，只有输出，其他每笔交易必须引用币的ID来阐明来源。且每笔交易要么不消耗比特币，要么消耗完比特币，可把剩余的比特币输出给自己的另外一个地址，此时需要地址转换。交易验证：通过哈希指针来验证交易合法性，输出是否等于上一笔交易的剩余值，是否双重支付等。共同支付：可两个输入，一个输出，并由两个输入者共同签名进行支付。交易数据数据结构">
 <meta name="keywords" content="区域链技术驱动金融读书笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数字货币去中心化">
-<meta property="og:url" content="https://daiyongya.github.io/2017/06/24/数字货币去中心化/index.html">
+<meta property="og:title" content="比特币运行机制">
+<meta property="og:url" content="https://daiyongya.github.io/2017/06/24/比特币运行机制/index.html">
 <meta property="og:site_name" content="青涩了枷">
-<meta property="og:description" content="中心化相关问题 谁来维护交易账本； 谁来审核交易的有效性； 谁来造币； 谁来制定系统变化规则； 如何取得交易价值；">
-<meta property="og:updated_time" content="2017-06-24T15:40:48.050Z">
+<meta property="og:description" content="比特币的交易每笔交易包括输入、输出和唯一的识别ID，其中造币交易没有输入，只有输出，其他每笔交易必须引用币的ID来阐明来源。且每笔交易要么不消耗比特币，要么消耗完比特币，可把剩余的比特币输出给自己的另外一个地址，此时需要地址转换。交易验证：通过哈希指针来验证交易合法性，输出是否等于上一笔交易的剩余值，是否双重支付等。共同支付：可两个输入，一个输出，并由两个输入者共同签名进行支付。交易数据数据结构">
+<meta property="og:updated_time" content="2017-06-24T16:14:46.549Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数字货币去中心化">
-<meta name="twitter:description" content="中心化相关问题 谁来维护交易账本； 谁来审核交易的有效性； 谁来造币； 谁来制定系统变化规则； 如何取得交易价值；">
+<meta name="twitter:title" content="比特币运行机制">
+<meta name="twitter:description" content="比特币的交易每笔交易包括输入、输出和唯一的识别ID，其中造币交易没有输入，只有输出，其他每笔交易必须引用币的ID来阐明来源。且每笔交易要么不消耗比特币，要么消耗完比特币，可把剩余的比特币输出给自己的另外一个地址，此时需要地址转换。交易验证：通过哈希指针来验证交易合法性，输出是否等于上一笔交易的剩余值，是否双重支付等。共同支付：可两个输入，一个输出，并由两个输入者共同签名进行支付。交易数据数据结构">
 
 
 
@@ -133,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="https://daiyongya.github.io/2017/06/24/数字货币去中心化/"/>
+  <link rel="canonical" href="https://daiyongya.github.io/2017/06/24/比特币运行机制/"/>
 
 
 
 
 
-  <title>数字货币去中心化 | 青涩了枷</title>
+  <title>比特币运行机制 | 青涩了枷</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -259,7 +259,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://daiyongya.github.io/2017/06/24/数字货币去中心化/">
+    <link itemprop="mainEntityOfPage" href="https://daiyongya.github.io/2017/06/24/比特币运行机制/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="NOBODY">
@@ -276,7 +276,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数字货币去中心化</h1>
+          <h1 class="post-title" itemprop="name headline">比特币运行机制</h1>
         
 
         <div class="post-meta">
@@ -288,7 +288,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-24T22:49:15+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-24T23:44:10+08:00">
                 2017-06-24
               </time>
             
@@ -329,7 +329,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/06/24/数字货币去中心化/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/06/24/比特币运行机制/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -361,54 +361,30 @@
 
       
         <hr>
-<h2 id="中心化相关问题"><a href="#中心化相关问题" class="headerlink" title="中心化相关问题"></a>中心化相关问题</h2><ul>
-<li>谁来维护交易账本；</li>
-<li>谁来审核交易的有效性；</li>
-<li>谁来造币；</li>
-<li>谁来制定系统变化规则；</li>
-<li>如何取得交易价值；<a id="more"></a>
-</li>
-</ul>
-<h2 id="分布式共识-distributed-consensus"><a href="#分布式共识-distributed-consensus" class="headerlink" title="分布式共识(distributed consensus)"></a>分布式共识(distributed consensus)</h2><p>共识的输入值必须由诚实节点生成及决定。<br><strong>技术难题</strong>：</p>
+<h2 id="比特币的交易"><a href="#比特币的交易" class="headerlink" title="比特币的交易"></a>比特币的交易</h2><p>每笔交易包括输入、输出和唯一的识别ID，其中造币交易没有输入，只有输出，其他每笔交易必须引用币的ID来阐明来源。且每笔交易要么不消耗比特币，要么消耗完比特币，可把剩余的比特币输出给自己的另外一个地址，此时需要地址转换。<br><strong>交易验证</strong>：通过哈希指针来验证交易合法性，输出是否等于上一笔交易的剩余值，是否双重支付等。<br><strong>共同支付</strong>：可两个输入，一个输出，并由两个输入者共同签名进行支付。<br>交易数据数据结构：</p>
 <ol>
-<li>部分节点死机或者是恶意的；</li>
-<li>p2p网络不稳定，如果需要所有节点达成共识不现实；</li>
-<li>互联网严重延迟；</li>
+<li>元数据，包括数据版本、格式等；</li>
+<li>输入，上一笔交易的地址及签名；</li>
+<li>输出，交易数目及交易对方的地址(公钥)；</li>
 </ol>
-<p>包括<strong>拜占庭问题</strong>(Byzantine Generals problem)及<strong>Ficher-lynch-Paterson</strong>说明了共识问题的难度，而比特币特意的做法为：</p>
+<h2 id="比特币脚本"><a href="#比特币脚本" class="headerlink" title="比特币脚本"></a>比特币脚本</h2><p>比特币脚本为堆栈式脚本，不是图灵完备的，只能被执行一次，无法循环执行。脚本包括：</p>
 <ul>
-<li>引入奖励，以利益驱动诚实，提高作弊成本；</li>
-<li>引入随机概率；</li>
+<li>上一笔交易的地址(公钥)及签名；</li>
+<li>各种操作，包括验证公钥及签名等；</li>
 </ul>
-<h2 id="比特币的共识问题"><a href="#比特币的共识问题" class="headerlink" title="比特币的共识问题"></a>比特币的共识问题</h2><p>隐形共识(implicit consensus)步骤：</p>
-<ol>
-<li>广播新产生的交易；</li>
-<li>节点把交易放进一个区块；</li>
-<li>每个回合，某一个随机节点可以广播自己找到的区块；</li>
-<li>其他区块接受符合规则的区块并把哈希值放进自己的区块；</li>
+<h2 id="比特币脚本应用"><a href="#比特币脚本应用" class="headerlink" title="比特币脚本应用"></a>比特币脚本应用</h2><p><strong>第三方支付交易</strong>(escrow transaction)<br>由买方、卖方、仲裁方组成交易三方，交易只需两方签名即可完成，正常情况由买卖双方签名达成交易，产生矛盾由卖方或者买方加上仲裁方签名完成交易。<br><strong>绿色地址</strong>(green addresses)<br>由于比特币验证时间较长，某担保方可进行担保，买卖双方进行瞬时交易，其他较慢的确认等动作由担保法完成，担保法地址为绿色地址。<br><strong>小额支付</strong><br>比如手机流量支付，买方可每分钟进行签名确认费用，最用一分钟买方确认后由卖方进行确认并断开服务完成交易，避免太过频繁的交易记录。</p>
+<h2 id="比特币区块"><a href="#比特币区块" class="headerlink" title="比特币区块"></a>比特币区块</h2><p>由区块头部哈希指针指向上一区块，由梅克尔树组织区块内交易，每个区块内包含币基交易，用于生产比特币，以奖励矿工。</p>
+<h2 id="比特币网络"><a href="#比特币网络" class="headerlink" title="比特币网络"></a>比特币网络</h2><ol>
+<li>加入网络：向知道的种子交换信息以加入网络；</li>
+<li>发起交易：泛洪(flooding)算法广播交易；</li>
+<li>检验交易：验证交易有效性</li>
 </ol>
-<p>比特币安全问题：</p>
+<p>竞态情况(race condition)<br>当双重支付时，某节点会接收同一币源的比特币交易信息，以先到为有效拒绝后到。</p>
+<h2 id="比特币机制的限制与优化"><a href="#比特币机制的限制与优化" class="headerlink" title="比特币机制的限制与优化"></a>比特币机制的限制与优化</h2><p>限制：大小为1M，一个区块最多4000个交易，平均10分钟产生一个区块，每秒钟处理7个交易。<br><strong>协议修改及软硬分叉</strong>：</p>
 <ul>
-<li>窃取比特币，由于无法伪造数字签名，通常会失败；</li>
-<li>拒绝服务攻击，由于服务任何节点都可提供，通常会失败；</li>
-<li>双重支付，由多重确认机制确保。</li>
+<li>硬分叉：当新旧协议完全不兼容时候，未更新协议的节点会遵从旧协议选中最长区域链分支，新协议则另起一分支产生分叉；</li>
+<li>软分叉：当新协议部分兼容旧协议时候，某一些区块满足旧协议未满足新协议造成小分叉；</li>
 </ul>
-<h2 id="奖励机制与工作量证明"><a href="#奖励机制与工作量证明" class="headerlink" title="奖励机制与工作量证明"></a>奖励机制与工作量证明</h2><p>奖励种类：</p>
-<ul>
-<li>造币奖励；</li>
-<li>交易奖励；</li>
-</ul>
-<p><strong>工作量证明</strong>：</p>
-<ul>
-<li>计算能力所占比例决定了节点被选中造币的概率；</li>
-<li>比特币采用了哈希函数解谜来证明工作量；</li>
-</ul>
-<p>哈希谜题：H(nounce||pre_hash||tx||….||tx)&lt;target<br>哈希谜题三个特性：</p>
-<ol>
-<li>难于计算；</li>
-<li>量化成本；</li>
-<li>易于证实；</li>
-</ol>
 
       
     </div>
@@ -451,8 +427,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/24/密码货币概述/" rel="next" title="密码货币概述">
-                <i class="fa fa-chevron-left"></i> 密码货币概述
+              <a href="/2017/06/24/数字货币去中心化/" rel="next" title="数字货币去中心化">
+                <i class="fa fa-chevron-left"></i> 数字货币去中心化
               </a>
             
           </div>
@@ -460,10 +436,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/24/比特币运行机制/" rel="prev" title="比特币运行机制">
-                比特币运行机制 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -601,7 +573,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#中心化相关问题"><span class="nav-number">1.</span> <span class="nav-text">中心化相关问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分布式共识-distributed-consensus"><span class="nav-number">2.</span> <span class="nav-text">分布式共识(distributed consensus)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比特币的共识问题"><span class="nav-number">3.</span> <span class="nav-text">比特币的共识问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#奖励机制与工作量证明"><span class="nav-number">4.</span> <span class="nav-text">奖励机制与工作量证明</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#比特币的交易"><span class="nav-number">1.</span> <span class="nav-text">比特币的交易</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比特币脚本"><span class="nav-number">2.</span> <span class="nav-text">比特币脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比特币脚本应用"><span class="nav-number">3.</span> <span class="nav-text">比特币脚本应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比特币区块"><span class="nav-number">4.</span> <span class="nav-text">比特币区块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比特币网络"><span class="nav-number">5.</span> <span class="nav-text">比特币网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比特币机制的限制与优化"><span class="nav-number">6.</span> <span class="nav-text">比特币机制的限制与优化</span></a></li></ol></div>
             
 
           </div>
