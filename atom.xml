@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://daiyongya.github.io/"/>
-  <updated>2017-06-24T14:46:51.062Z</updated>
+  <updated>2017-06-24T15:40:48.050Z</updated>
   <id>https://daiyongya.github.io/</id>
   
   <author>
@@ -16,11 +16,88 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>数字货币去中心化</title>
+    <link href="https://daiyongya.github.io/2017/06/24/%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96/"/>
+    <id>https://daiyongya.github.io/2017/06/24/数字货币去中心化/</id>
+    <published>2017-06-24T14:49:15.000Z</published>
+    <updated>2017-06-24T15:40:48.050Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<h2 id="中心化相关问题"><a href="#中心化相关问题" class="headerlink" title="中心化相关问题"></a>中心化相关问题</h2><ul>
+<li>谁来维护交易账本；</li>
+<li>谁来审核交易的有效性；</li>
+<li>谁来造币；</li>
+<li>谁来制定系统变化规则；</li>
+<li>如何取得交易价值；<a id="more"></a>
+</li>
+</ul>
+<h2 id="分布式共识-distributed-consensus"><a href="#分布式共识-distributed-consensus" class="headerlink" title="分布式共识(distributed consensus)"></a>分布式共识(distributed consensus)</h2><p>共识的输入值必须由诚实节点生成及决定。<br><strong>技术难题</strong>：</p>
+<ol>
+<li>部分节点死机或者是恶意的；</li>
+<li>p2p网络不稳定，如果需要所有节点达成共识不现实；</li>
+<li>互联网严重延迟；</li>
+</ol>
+<p>包括<strong>拜占庭问题</strong>(Byzantine Generals problem)及<strong>Ficher-lynch-Paterson</strong>说明了共识问题的难度，而比特币特意的做法为：</p>
+<ul>
+<li>引入奖励，以利益驱动诚实，提高作弊成本；</li>
+<li>引入随机概率；</li>
+</ul>
+<h2 id="比特币的共识问题"><a href="#比特币的共识问题" class="headerlink" title="比特币的共识问题"></a>比特币的共识问题</h2><p>隐形共识(implicit consensus)步骤：</p>
+<ol>
+<li>广播新产生的交易；</li>
+<li>节点把交易放进一个区块；</li>
+<li>每个回合，某一个随机节点可以广播自己找到的区块；</li>
+<li>其他区块接受符合规则的区块并把哈希值放进自己的区块；</li>
+</ol>
+<p>比特币安全问题：</p>
+<ul>
+<li>窃取比特币，由于无法伪造数字签名，通常会失败；</li>
+<li>拒绝服务攻击，由于服务任何节点都可提供，通常会失败；</li>
+<li>双重支付，由多重确认机制确保。</li>
+</ul>
+<h2 id="奖励机制与工作量证明"><a href="#奖励机制与工作量证明" class="headerlink" title="奖励机制与工作量证明"></a>奖励机制与工作量证明</h2><p>奖励种类：</p>
+<ul>
+<li>造币奖励；</li>
+<li>交易奖励；</li>
+</ul>
+<p><strong>工作量证明</strong>：</p>
+<ul>
+<li>计算能力所占比例决定了节点被选中造币的概率；</li>
+<li>比特币采用了哈希函数解谜来证明工作量；</li>
+</ul>
+<p>哈希谜题：H(nounce||pre_hash||tx||….||tx)&lt;target<br>哈希谜题三个特性：</p>
+<ol>
+<li>难于计算；</li>
+<li>量化成本；</li>
+<li>易于证实；</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h2 id=&quot;中心化相关问题&quot;&gt;&lt;a href=&quot;#中心化相关问题&quot; class=&quot;headerlink&quot; title=&quot;中心化相关问题&quot;&gt;&lt;/a&gt;中心化相关问题&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;谁来维护交易账本；&lt;/li&gt;
+&lt;li&gt;谁来审核交易的有效性；&lt;/li&gt;
+&lt;li&gt;谁来造币；&lt;/li&gt;
+&lt;li&gt;谁来制定系统变化规则；&lt;/li&gt;
+&lt;li&gt;如何取得交易价值；
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="区域链技术驱动金融读书笔记" scheme="https://daiyongya.github.io/tags/%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E9%87%91%E8%9E%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>密码货币概述</title>
     <link href="https://daiyongya.github.io/2017/06/24/%E5%AF%86%E7%A0%81%E8%B4%A7%E5%B8%81%E6%A6%82%E8%BF%B0/"/>
     <id>https://daiyongya.github.io/2017/06/24/密码货币概述/</id>
     <published>2017-06-24T14:08:22.000Z</published>
-    <updated>2017-06-24T14:46:51.062Z</updated>
+    <updated>2017-06-24T14:48:40.074Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="密码学之哈希函数"><a href="#密码学之哈希函数" class="headerlink" title="密码学之哈希函数"></a>密码学之哈希函数</h2><p><strong>定义</strong>：输入为任意位数数值，经过某一函数后，输出为固定位数数值，这个函数必须具有以下三大特性：</p>
@@ -33,7 +110,7 @@
 <h2 id="哈希指针及及其数据结构"><a href="#哈希指针及及其数据结构" class="headerlink" title="哈希指针及及其数据结构"></a>哈希指针及及其数据结构</h2><p><strong>哈希指针定义</strong> (hash pointer)：</p>
 <ol>
 <li>普通指针；  </li>
-<li>指针指为某输入数值哈希值；</li>
+<li>指针值为某输入数值哈希值；</li>
 </ol>
 <p><strong>区块链定义</strong> (block chain)：</p>
 <ol>
