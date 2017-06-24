@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://daiyongya.github.io/"/>
-  <updated>2017-06-06T14:16:29.208Z</updated>
+  <updated>2017-06-24T14:33:04.998Z</updated>
   <id>https://daiyongya.github.io/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>密码货币概述</title>
+    <link href="https://daiyongya.github.io/2017/06/24/%E5%AF%86%E7%A0%81%E8%B4%A7%E5%B8%81%E6%A6%82%E8%BF%B0/"/>
+    <id>https://daiyongya.github.io/2017/06/24/密码货币概述/</id>
+    <published>2017-06-24T14:08:22.000Z</published>
+    <updated>2017-06-24T14:33:04.998Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<h2 id="密码学之哈希函数"><a href="#密码学之哈希函数" class="headerlink" title="密码学之哈希函数"></a>密码学之哈希函数</h2><p><strong>定义</strong>：输入为任意位数数值，经过某一函数后，输出为固定位数数值，这个函数必须具有以下三大特性：<br>-<strong>碰撞阻力</strong>：不能存在不同输入得到相同输出；<br>-<strong>隐秘性</strong>：输入函数如果有一个高阶最小熵数值和固定输入数值组成，通过输出函数不能倒推出输入数值；<br>-<strong>谜题友好</strong>：在可执行时间内找到输入数值，保证通过哈希函数后产生一定条件的输出数值；</p>
+<h2 id="哈希指针及及其数据结构"><a href="#哈希指针及及其数据结构" class="headerlink" title="哈希指针及及其数据结构"></a>哈希指针及及其数据结构</h2><p><strong>哈希指针定义</strong> (hash pointer)： 1. 普通指针；  2. 指针指为某输入数值哈希值；<br><strong>区块链定义</strong> (block chain)： 1.普通链表；  2. 指针采用哈希指针；  3. 第一块BLOCK为genesis block，无法更改；<br><strong>梅克尔树</strong> (merkle trees)： 1. 二叉树；  2. 树的叶子包含数据及左右子节点哈希指针； 3. 根节点哈希值即可防止数据篡改；</p>
+<h2 id="数字签名"><a href="#数字签名" class="headerlink" title="数字签名"></a>数字签名</h2><p><strong>特性</strong>： 1. 保证只有自己可以签名，即签名的唯一性；  2. 签名与每一文件一一对应，不可复制使用；<br><strong>数字签名方案</strong>： 1. (sk,pk)=generatekeys(keysize);  2. sig:=sign(sk,message);  3. isValid:=verify(pk,message,sig);<br>公钥(pk)的哈希值可作为身份使用，即公钥即身份。 </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h2 id=&quot;密码学之哈希函数&quot;&gt;&lt;a href=&quot;#密码学之哈希函数&quot; class=&quot;headerlink&quot; title=&quot;密码学之哈希函数&quot;&gt;&lt;/a&gt;密码学之哈希函数&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;：输入为任意位数数值，经过某一函数后，输出为
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="区域链技术驱动金融读书笔记" scheme="https://daiyongya.github.io/tags/%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E9%87%91%E8%9E%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>国内区域链技术发展</title>
