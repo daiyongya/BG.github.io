@@ -348,13 +348,19 @@
 
       
         
-          
-            <hr>
-<h2 id="密码学之哈希函数"><a href="#密码学之哈希函数" class="headerlink" title="密码学之哈希函数"></a>密码学之哈希函数</h2><p><strong>定义</strong>：输入为任意位数数值，经过某一函数后，输出为固定位数数值，这个函数必须具有以下三大特性：<br>-<strong>碰撞阻力</strong>：不能存在不同输入得到相同输出；<br>-<strong>隐秘性</strong>：输入函数如果有一个高阶最小熵数值和固定输入数值组成，通过输出函数不能倒推出输入数值；<br>-<strong>谜题友好</strong>：在可执行时间内找到输入数值，保证通过哈希函数后产生一定条件的输出数值；</p>
-<h2 id="哈希指针及及其数据结构"><a href="#哈希指针及及其数据结构" class="headerlink" title="哈希指针及及其数据结构"></a>哈希指针及及其数据结构</h2><p><strong>哈希指针定义</strong> (hash pointer)： 1. 普通指针；  2. 指针指为某输入数值哈希值；<br><strong>区块链定义</strong> (block chain)： 1.普通链表；  2. 指针采用哈希指针；  3. 第一块BLOCK为genesis block，无法更改；<br><strong>梅克尔树</strong> (merkle trees)： 1. 二叉树；  2. 树的叶子包含数据及左右子节点哈希指针； 3. 根节点哈希值即可防止数据篡改；</p>
-<h2 id="数字签名"><a href="#数字签名" class="headerlink" title="数字签名"></a>数字签名</h2><p><strong>特性</strong>： 1. 保证只有自己可以签名，即签名的唯一性；  2. 签名与每一文件一一对应，不可复制使用；<br><strong>数字签名方案</strong>： 1. (sk,pk)=generatekeys(keysize);  2. sig:=sign(sk,message);  3. isValid:=verify(pk,message,sig);<br>公钥(pk)的哈希值可作为身份使用，即公钥即身份。 </p>
-
-          
+          <hr>
+<h2 id="密码学之哈希函数"><a href="#密码学之哈希函数" class="headerlink" title="密码学之哈希函数"></a>密码学之哈希函数</h2><p><strong>定义</strong>：输入为任意位数数值，经过某一函数后，输出为固定位数数值，这个函数必须具有以下三大特性：</p>
+<ul>
+<li><strong>碰撞阻力</strong>：不能存在不同输入得到相同输出；</li>
+<li><strong>隐秘性</strong>：输入函数如果有一个高阶最小熵数值和固定输入数值组成，通过输出函数不能倒推出输入数值；</li>
+<li><strong>谜题友好</strong>：在可执行时间内找到输入数值，保证通过哈希函数后产生一定条件的输出数值；
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/24/密码货币概述/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
