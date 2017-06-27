@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://daiyongya.github.io/"/>
-  <updated>2017-06-24T16:17:51.245Z</updated>
+  <updated>2017-06-27T14:19:26.797Z</updated>
   <id>https://daiyongya.github.io/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>比特币的存储和使用</title>
+    <link href="https://daiyongya.github.io/2017/06/27/%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E5%AD%98%E5%82%A8%E5%92%8C%E4%BD%BF%E7%94%A8/"/>
+    <id>https://daiyongya.github.io/2017/06/27/比特币的存储和使用/</id>
+    <published>2017-06-27T13:43:06.000Z</published>
+    <updated>2017-06-27T14:19:26.797Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p>存储和管理比特币的实质是对私钥的管理，其三个目标是：可获取行、安全性、便利性。<br><a id="more"></a></p>
+<h2 id="简化存储与交易"><a href="#简化存储与交易" class="headerlink" title="简化存储与交易"></a>简化存储与交易</h2><p>比特币钱包软件可提供给用户易用的收款付款UI，而把实现细节隐藏在后台，亦可通过哈希地址甚至哈希地址的二维码进行付款。</p>
+<h2 id="私钥存储方式"><a href="#私钥存储方式" class="headerlink" title="私钥存储方式"></a>私钥存储方式</h2><p>可分为热存储与冷存储。存储介质长期在线的属于热存储，离线的是冷存储，可用热存储管理零钱，冷存储管理大额币值。<br><strong>分层确定性钱包</strong>(hierarchical deterministic wallet)<br>为了使冷存储尽量不上线就能以不同的地址接受比特币而不暴露其他信息，可用随机数生产公钥和私钥，使得冷热存储地址信息同步，原理如下：<br>假设k,y为随机数，i为第i层地址，有：</p>
+<ul>
+<li>私钥生成信息：$k,x,y$；</li>
+<li>第i个私钥：$x=y+H(k||i)$；</li>
+<li>地址生成信息： $k,g^y$;</li>
+<li>第i个公钥：$g^(x_i)$</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;存储和管理比特币的实质是对私钥的管理，其三个目标是：可获取行、安全性、便利性。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="区域链技术驱动金融读书笔记" scheme="https://daiyongya.github.io/tags/%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E9%87%91%E8%9E%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>比特币运行机制</title>
