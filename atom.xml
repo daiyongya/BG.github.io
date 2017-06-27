@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://daiyongya.github.io/"/>
-  <updated>2017-06-27T14:53:08.433Z</updated>
+  <updated>2017-06-27T16:19:26.127Z</updated>
   <id>https://daiyongya.github.io/</id>
   
   <author>
@@ -14,6 +14,139 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>匿名性</title>
+    <link href="https://daiyongya.github.io/2017/06/27/%E5%8C%BF%E5%90%8D%E6%80%A7/"/>
+    <id>https://daiyongya.github.io/2017/06/27/匿名性/</id>
+    <published>2017-06-27T15:35:44.000Z</published>
+    <updated>2017-06-27T16:19:26.127Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<h2 id="匿名常识"><a href="#匿名常识" class="headerlink" title="匿名常识"></a>匿名常识</h2><p>比特币匿名的两种解释：</p>
+<ol>
+<li>比特币的地址时公钥的哈希值，没有真实姓名等信息，是匿名；</li>
+<li>地址本身是一种虚拟标识，应该是化名，而不是匿名。<a id="more"></a>
+</li>
+</ol>
+<p><em>实质上，匿名性指的是无关联性(unlinkability)的化名</em>。<br>旁路攻击(side channels)<br>即使真实姓名和比特币地址无直接关联，一些其他信息也可暴露真实身份。比如关联微信状态信息和交易信息。关联以后便有机会找出私人身份，并查看所有交易。<br>无关联性的关键属性：</p>
+<ul>
+<li>同一用户不同地址不相关；</li>
+<li>同一用户不同交易不相关；</li>
+<li>同一交易交易双方不相关；</li>
+</ul>
+<p>第三条只能尽量避免，或者通过匿名集技术避免。为什么需要匿名呢？比特币账本是完全公开永久可追踪，如果匿名性不够好，将泄露所有交易隐私。比特币匿名性的目标是达到传统银行的匿名级别，后续超过。但匿名性与比特币本身的去中心化常常矛盾，需权衡处置。</p>
+<h2 id="去匿名化"><a href="#去匿名化" class="headerlink" title="去匿名化"></a>去匿名化</h2><p>可通过合帐交易，形成地址簇(clustering of addresses)，逐渐去匿名化。比如对交易地址进行聚类，或者先发生交易，再进行聚类打标。<br><strong>辨识个人账户方法</strong></p>
+<ul>
+<li>直接交易，找出部分地址，再进行聚类；</li>
+<li>通过服务提供商；</li>
+<li>找出个人疏忽信息；</li>
+</ul>
+<h2 id="混币-mixing"><a href="#混币-mixing" class="headerlink" title="混币(mixing)"></a>混币(mixing)</h2><p>技术逻辑为使用中介进行交易。部分钱包可以进行混币，但内部会保留信息，也会透露个人信息。有服务商专门提供混币，但安全会依赖服务商。<br><strong>混币准则</strong></p>
+<ul>
+<li>可多重混币；</li>
+<li>一致性交易，比如同样币值会的混币会降低匿名性；</li>
+<li>客户端自动化混币；</li>
+</ul>
+<h2 id="分布式混币-Decentralized-mixing"><a href="#分布式混币-Decentralized-mixing" class="headerlink" title="分布式混币(Decentralized mixing)"></a>分布式混币(Decentralized mixing)</h2><p>分布式混币优势：</p>
+<ul>
+<li>不需要一个具有绝对公信力的混币服务商；</li>
+<li>协议保证几乎不能盗币；</li>
+</ul>
+<p><strong>实现混币主要方案步骤</strong>：</p>
+<ol>
+<li>找到可以混币的交易对手作为节点；</li>
+<li>交换输入输出地址；</li>
+<li>建立交易；</li>
+<li>发送交易细节，签名输出；</li>
+<li>广播交易；</li>
+</ol>
+<h2 id="零币与零钞"><a href="#零币与零钞" class="headerlink" title="零币与零钞"></a>零币与零钞</h2><p>基础比(basecoin)概念，基础币和零币来回转换，保证新币与旧币的无关联性，将具有更好的匿名性。<br><strong>零知识验证</strong><br>如果能在不透露任何关键信息的情况下，能够证明一个声明是正确的，则具有零知识验证性质。比如不透露关键信息证明哈希谜题。<br>$H(X||<other inputs="">)target$<br>即在不告知x的情况下证明哈希谜题。<br>而零币可作为中介，帮助完成交易，但零币与比特币直接不存在关联，加强匿名性。零币铸币过程如下：</other></p>
+<ol>
+<li>生存序列号S和随机密钥R；</li>
+<li>计算COMMIT(S,R),这是一个承诺；</li>
+<li>在S,R保密前提下，在区域链发布承诺，消耗一个比特币，产生零币；</li>
+</ol>
+<p>以下为消耗掉零币赎回比特币过程：</p>
+<ol>
+<li>创建“消费”交易，，包含S和零知识验证声明；</li>
+<li>矿工验证零知识验证声明；</li>
+<li>矿工查询S，保证未经使用；</li>
+<li>赎回新币到指定地址；</li>
+</ol>
+<p>每一个新币有特定S，一旦公布便不能再使用此零币，防止双重支付。<br><strong>零钞</strong><br>零钞系统是加强版匿名系统，零钞系统的交易不会把交易金额等关键信息进行公布，密码学证据保证了币的拆分及合并合法，系统只会公布交易的存在性及验证零知识验证所需要的关键信息，具体参考ZK-SNARKS技术。<br><strong>综合比较</strong></p>
+<ol>
+<li>比特币：容易被交易图谱分析；</li>
+<li>人工混币：服务商与节点存在威胁；</li>
+<li>多重混币/合币：旁路攻击危险；</li>
+<li>零币：与比特币不兼容，存在旁路攻击；</li>
+<li>零钞：与比特币不兼容，需要复杂的建立流程。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h2 id=&quot;匿名常识&quot;&gt;&lt;a href=&quot;#匿名常识&quot; class=&quot;headerlink&quot; title=&quot;匿名常识&quot;&gt;&lt;/a&gt;匿名常识&lt;/h2&gt;&lt;p&gt;比特币匿名的两种解释：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;比特币的地址时公钥的哈希值，没有真实姓名等信息，是匿名；&lt;/li&gt;
+&lt;li&gt;地址本身是一种虚拟标识，应该是化名，而不是匿名。
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="区域链技术驱动金融读书笔记" scheme="https://daiyongya.github.io/tags/%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E9%87%91%E8%9E%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>比特币挖矿</title>
+    <link href="https://daiyongya.github.io/2017/06/27/%E6%AF%94%E7%89%B9%E5%B8%81%E6%8C%96%E7%9F%BF/"/>
+    <id>https://daiyongya.github.io/2017/06/27/比特币挖矿/</id>
+    <published>2017-06-27T15:00:47.000Z</published>
+    <updated>2017-06-27T15:31:58.745Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<h2 id="挖矿-bitcoin-mining-任务"><a href="#挖矿-bitcoin-mining-任务" class="headerlink" title="挖矿(bitcoin mining)任务"></a>挖矿(bitcoin mining)任务</h2><p>加入比特币网络，然后完成以下任务：</p>
+<ol>
+<li>监听交易广播，验证交易；</li>
+<li>维护区块链网络和监听新的区块链，验证；</li>
+<li>组装备选区块链；<a id="more"></a></li>
+<li>找到有效随机数使得新的区块链有效；</li>
+<li>广播新区块链使得被接受；</li>
+<li>获得利润</li>
+</ol>
+<p><strong>寻找有效区块</strong><br>矿工任务为组织新的交易，形成梅克尔树，并让头部指针指向上一区块，尝试随机数使得整个区块链哈希值小于目标值，则挖矿成功。可改变的随机树包括区块头部的32位随机数，及区块内部币基交易的随机数。<br><strong>挖矿难度</strong><br>每产生2016个区块，挖矿难度重新计算，以保证平均每10分钟产生一个区块。</p>
+<h2 id="挖矿硬件"><a href="#挖矿硬件" class="headerlink" title="挖矿硬件"></a>挖矿硬件</h2><p>挖矿实质上是对SHA256函数的运算，从一开始从CPU，GPU，到FPGA，到现在的ASIC专用集成电路，小矿工生存空间越来越小。</p>
+<h2 id="矿池"><a href="#矿池" class="headerlink" title="矿池"></a>矿池</h2><p>由于过多专业玩家的加入，中小玩家生存空间越来越小。中小玩家为了生存，大玩家为了更加垄断，形成了抱团挖矿，即所谓的矿池。矿池运营基本模式为按照公分进行分工。什么是公分呢，比如新产生的哈希值前面是70个0，而某矿工找到了60个0的哈希值，此矿池的规则是大于55个0则计入公分，此矿工便拥有了一公分。如果此矿池挖到了新矿，则按照公分进行分红，部分矿池甚至每挖到一个公分就给矿工分钱。</p>
+<h2 id="挖矿激励即策略"><a href="#挖矿激励即策略" class="headerlink" title="挖矿激励即策略"></a>挖矿激励即策略</h2><p><strong>几个相关问题</strong></p>
+<ul>
+<li>需包含哪些交易；</li>
+<li>对哪个区块进行挖矿；</li>
+<li>如果同时出现两个新区块，如何进行选择；</li>
+<li>什么时候宣布新区块；<br><strong>分叉攻击</strong>(forking attack)<br>当算力超过0.5时，被分叉的区块超过了最长区块，会导致双重支付。当然也可通过贿赂具有算力的矿池进行攻击。<br><strong>临时保留区攻击</strong>(temporary block withholding attacks)<br>由于利益关系，部分矿工或矿池可能冒险，当区块被发现时不宣布，等到第二块区块发现时才宣布，中间时间如果有被发现的区块则会作废。<br><strong>黑名单与惩罚分叉攻击</strong>(punitive forking)<br>如果某矿工或矿池掌握算力，可拒绝某一用户交易，导致此用户比特币不可用。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h2 id=&quot;挖矿-bitcoin-mining-任务&quot;&gt;&lt;a href=&quot;#挖矿-bitcoin-mining-任务&quot; class=&quot;headerlink&quot; title=&quot;挖矿(bitcoin mining)任务&quot;&gt;&lt;/a&gt;挖矿(bitcoin mining)任务&lt;/h2&gt;&lt;p&gt;加入比特币网络，然后完成以下任务：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;监听交易广播，验证交易；&lt;/li&gt;
+&lt;li&gt;维护区块链网络和监听新的区块链，验证；&lt;/li&gt;
+&lt;li&gt;组装备选区块链；
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="区域链技术驱动金融读书笔记" scheme="https://daiyongya.github.io/tags/%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E9%87%91%E8%9E%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>比特币的存储和使用</title>
