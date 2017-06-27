@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://daiyongya.github.io/"/>
-  <updated>2017-06-27T14:19:26.797Z</updated>
+  <updated>2017-06-27T14:53:08.433Z</updated>
   <id>https://daiyongya.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://daiyongya.github.io/2017/06/27/%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E5%AD%98%E5%82%A8%E5%92%8C%E4%BD%BF%E7%94%A8/"/>
     <id>https://daiyongya.github.io/2017/06/27/比特币的存储和使用/</id>
     <published>2017-06-27T13:43:06.000Z</published>
-    <updated>2017-06-27T14:19:26.797Z</updated>
+    <updated>2017-06-27T14:53:08.433Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <p>存储和管理比特币的实质是对私钥的管理，其三个目标是：可获取行、安全性、便利性。<br><a id="more"></a></p>
@@ -30,8 +30,13 @@
 <li>私钥生成信息：$k,x,y$；</li>
 <li>第i个私钥：$x=y+H(k||i)$；</li>
 <li>地址生成信息： $k,g^y$;</li>
-<li>第i个公钥：$g^(x_i)$</li>
+<li>第i个公钥：$g^{x_i}=g^{H(k||i)}*g^y$</li>
+<li>第i个地址：$H（g^{x_i}）$</li>
 </ul>
+<p><em>大脑钱包</em>(brain wallet)<br>把口令生成一对公钥/私钥，用口令进行管理。<br><em>纸钱包</em><br>把密匙印在纸上，纸锁在保险柜里(有点意思)。<br><em>防损硬件</em>(tamper-resistant device)<br>用硬件保存密匙或者生成密匙，类似于以前办理网上银行时候，银行给的电子密匙。</p>
+<h2 id="密匙分存和共享"><a href="#密匙分存和共享" class="headerlink" title="密匙分存和共享"></a>密匙分存和共享</h2><p><strong>密匙分存</strong><br>原理为把密钥分成N份，只要获得其中K份，可还原密钥。比如把一个密钥分成两份，若S为密钥，生成随机数R，运算$ S\oplus R$生成另外一个随机数，我们可以把R作为密钥，$ S\oplus R$作为密文，只知道其中一个都无法得到S，同时得到后再以后才可还原S。<br><strong>密文生成规则</strong><br>根据拉格朗日公式，回归自由度为K-1的曲线，需要K个点。同理，如果使用自由度为K-1的曲线上的点进行分存，为了还原密钥，需要知道K个点。<br><strong>门限密码</strong>(treshold cryptography)<br>treshold signature技术原理举例，比如两份密码，一份存电脑，一份存手机，先由电脑同意交易后传递给手机，手机确认后方可交易，即需要同时签名。</p>
+<h2 id="在线钱包和交易所"><a href="#在线钱包和交易所" class="headerlink" title="在线钱包和交易所"></a>在线钱包和交易所</h2><p>比特币交易所三大风险：挤兑、庞氏骗局及黑客入侵。为了防止挤兑，有时需要交易所披露存款规模，可通过梅克尔树对每个用户存款进行组织，每个叶子代表一个用户存款信息，汇总到根节点，如果根节点哈希值正确则可保证总存款无误。</p>
+<h2 id="交易费"><a href="#交易费" class="headerlink" title="交易费"></a>交易费</h2><p>比特币交易有时需要交易费，如果一笔交易输入大于输出，差额则为交易费，由矿工收入。</p>
 ]]></content>
     
     <summary type="html">
