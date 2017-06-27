@@ -106,7 +106,7 @@
     <link href="https://daiyongya.github.io/2017/06/27/%E6%AF%94%E7%89%B9%E5%B8%81%E6%8C%96%E7%9F%BF/"/>
     <id>https://daiyongya.github.io/2017/06/27/比特币挖矿/</id>
     <published>2017-06-27T15:00:47.000Z</published>
-    <updated>2017-06-27T15:31:58.745Z</updated>
+    <updated>2017-06-27T16:24:41.512Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="挖矿-bitcoin-mining-任务"><a href="#挖矿-bitcoin-mining-任务" class="headerlink" title="挖矿(bitcoin mining)任务"></a>挖矿(bitcoin mining)任务</h2><p>加入比特币网络，然后完成以下任务：</p>
@@ -126,8 +126,9 @@
 <li>需包含哪些交易；</li>
 <li>对哪个区块进行挖矿；</li>
 <li>如果同时出现两个新区块，如何进行选择；</li>
-<li>什么时候宣布新区块；<br><strong>分叉攻击</strong>(forking attack)<br>当算力超过0.5时，被分叉的区块超过了最长区块，会导致双重支付。当然也可通过贿赂具有算力的矿池进行攻击。<br><strong>临时保留区攻击</strong>(temporary block withholding attacks)<br>由于利益关系，部分矿工或矿池可能冒险，当区块被发现时不宣布，等到第二块区块发现时才宣布，中间时间如果有被发现的区块则会作废。<br><strong>黑名单与惩罚分叉攻击</strong>(punitive forking)<br>如果某矿工或矿池掌握算力，可拒绝某一用户交易，导致此用户比特币不可用。</li>
+<li>什么时候宣布新区块；</li>
 </ul>
+<p><strong>分叉攻击</strong>(forking attack)<br>当算力超过0.5时，被分叉的区块超过了最长区块，会导致双重支付。当然也可通过贿赂具有算力的矿池进行攻击。<br><strong>临时保留区攻击</strong>(temporary block withholding attacks)<br>由于利益关系，部分矿工或矿池可能冒险，当区块被发现时不宣布，等到第二块区块发现时才宣布，中间时间如果有被发现的区块则会作废。<br><strong>黑名单与惩罚分叉攻击</strong>(punitive forking)<br>如果某矿工或矿池掌握算力，可拒绝某一用户交易，导致此用户比特币不可用。</p>
 ]]></content>
     
     <summary type="html">
