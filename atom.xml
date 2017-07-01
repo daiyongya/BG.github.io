@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://daiyongya.github.io/"/>
-  <updated>2017-06-27T16:19:26.127Z</updated>
+  <updated>2017-07-01T04:11:45.274Z</updated>
   <id>https://daiyongya.github.io/</id>
   
   <author>
@@ -16,16 +16,113 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>其他挖矿算法</title>
+    <link href="https://daiyongya.github.io/2017/06/30/%E5%85%B6%E4%BB%96%E6%8C%96%E7%9F%BF%E7%AE%97%E6%B3%95/"/>
+    <id>https://daiyongya.github.io/2017/06/30/其他挖矿算法/</id>
+    <published>2017-06-30T15:58:50.000Z</published>
+    <updated>2017-07-01T04:11:45.274Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<h2 id="挖矿算法基本要求"><a href="#挖矿算法基本要求" class="headerlink" title="挖矿算法基本要求"></a>挖矿算法基本要求</h2><p>可以作为挖矿的算法，必须具有以下性质：</p>
+<ol>
+<li>挖矿难度可调整，以保证计算力的增减不会导致挖矿速度急速变化；</li>
+<li>挖矿结果可以快速验证；</li>
+<li>能给买个矿工一定概率挖到矿，不然挖矿算力被控制以后将导致区块链出错；<a id="more"></a>
+</li>
+</ol>
+<h2 id="反ASIC运动"><a href="#反ASIC运动" class="headerlink" title="反ASIC运动"></a>反ASIC运动</h2><p>现在的挖矿被强大的ASIC垄断，个人参与者参与感较低，早期对比特币设想的“一个CPU一票”机制难以实现，故掀起了一股反ASIC浪潮，目的是让每个用户都能参与到挖矿，以实现真正的去中心化。<br><strong>刚性内存解谜</strong>(memory-hard puzzles)<br>为了消弱ASIC带来得巨大算力优势，有人提出要用CPU算力的需求变换成对内存的需求，解谜成本的上升速率会随着内存提升速率一致，限制在一定水平。<br><strong>Scrypt</strong><br>它使刚性内存解谜算法，最早用于加密密码，后被莱特比采用用来挖矿，大致步骤如下：</p>
+<ol>
+<li>用随机数填充RAM缓存空间；</li>
+<li>从RAM里面随机读取数据；<br>此算法需要选取足够大的数N来作为随机数的上限，但太大之后会增加挖矿难度。</li>
+</ol>
+<h2 id="有效工作证明"><a href="#有效工作证明" class="headerlink" title="有效工作证明"></a>有效工作证明</h2><p><strong>比特币解谜算法特点</strong>：</p>
+<ol>
+<li>解谜区域机会均等，不可预测；</li>
+<li>解谜库永不枯竭；</li>
+<li>谜题通过算法自动生成；<br><em>质数币</em><br>质数币算法也具有比特币的三个特征，但解谜算法已改变。质数币是为质数找到一个“坎宁安链”(CUNNINGHAM CHAIN)。大致过程为：K个质数序列 $P_1,P_2,…,P_k$ ,使得$P<em>k=2P</em>{k-1}+1$ ,找到一个非质数的和。</li>
+</ol>
+<h2 id="矿池利弊"><a href="#矿池利弊" class="headerlink" title="矿池利弊"></a>矿池利弊</h2><p>矿池的形成对矿工来说可能是一件好事，可以平摊风险，按照算力进行平摊。矿池需具有以下特性：</p>
+<ol>
+<li>矿工可以很容易通过公分来证明其工作量；</li>
+<li>矿工必须按照矿池规则进行挖矿，而矿池作为整体收益，由于公钥被写进币基交易这点很容易办到。<br>但由于利益或者个人心情，部分矿工有可能挖到矿后不报导致作废，而还能得到公分，矿池将收到损失。如果增加一种协议，可以小额度奖励已经找到低等难度谜题答案的矿工，增加矿工的参与度而阻止矿池的形成。</li>
+</ol>
+<h2 id="虚拟挖矿"><a href="#虚拟挖矿" class="headerlink" title="虚拟挖矿"></a>虚拟挖矿</h2><p>virtual mining的提出是希望能降低挖矿的投入，减少能源浪费等，设计一种投票系统，选票由拥有币的数量决定，而不是算力，即所谓的”权益证明”。但挖矿成本的降低，也降低了故意的分叉成本，因为投入极大降低了，故形成了以下缺点：</p>
+<ul>
+<li>可以对挖矿能力今昔“蓄力”(save up)，可能导致分叉；</li>
+<li>如果拥有51%筹码，可以只在自己认可的区域链上挖矿，控制整个区域链。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h2 id=&quot;挖矿算法基本要求&quot;&gt;&lt;a href=&quot;#挖矿算法基本要求&quot; class=&quot;headerlink&quot; title=&quot;挖矿算法基本要求&quot;&gt;&lt;/a&gt;挖矿算法基本要求&lt;/h2&gt;&lt;p&gt;可以作为挖矿的算法，必须具有以下性质：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;挖矿难度可调整，以保证计算力的增减不会导致挖矿速度急速变化；&lt;/li&gt;
+&lt;li&gt;挖矿结果可以快速验证；&lt;/li&gt;
+&lt;li&gt;能给买个矿工一定概率挖到矿，不然挖矿算力被控制以后将导致区块链出错；
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="区域链技术驱动金融读书笔记" scheme="https://daiyongya.github.io/tags/%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E9%87%91%E8%9E%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>比特币利益相关主体</title>
+    <link href="https://daiyongya.github.io/2017/06/30/%E6%AF%94%E7%89%B9%E5%B8%81%E5%88%A9%E7%9B%8A%E7%9B%B8%E5%85%B3%E4%B8%BB%E4%BD%93/"/>
+    <id>https://daiyongya.github.io/2017/06/30/比特币利益相关主体/</id>
+    <published>2017-06-30T15:48:14.000Z</published>
+    <updated>2017-06-30T16:23:09.335Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<h2 id="比特币相关主体"><a href="#比特币相关主体" class="headerlink" title="比特币相关主体"></a>比特币相关主体</h2><ul>
+<li>bitcoin core主要开发人员决定了规则的共识；</li>
+<li>矿工决定了对交易历史记录的共识；<a id="more"></a></li>
+<li>投资人购买并持有比特币，是对比特币价格的共识；</li>
+<li>商家及客户使用比特币进行交易，构成了比特币需求的共识；</li>
+<li>交易服务商，比如支持比特币付款的网上商城，可能是最大需求方；</li>
+</ul>
+<h2 id="关于政府监管的理由"><a href="#关于政府监管的理由" class="headerlink" title="关于政府监管的理由"></a>关于政府监管的理由</h2><ul>
+<li>比特币可以轻易饶过政府监管，比如跨境的资金转移，境内买入，境外卖出，轻易破之；</li>
+<li>比特币的匿名性，使得各种犯罪，比如绑架勒索之类的更加难以追踪；</li>
+</ul>
+<h2 id="比特币实践经验"><a href="#比特币实践经验" class="headerlink" title="比特币实践经验"></a>比特币实践经验</h2><ul>
+<li>完全的匿名性，即把现实世界和数字货币货币完全分离是极其困难的，可参考“丝绸之路”追捕过程；</li>
+<li>执法人员仍然可以对资金去向进行监视和追踪，虽然具有难度；</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h2 id=&quot;比特币相关主体&quot;&gt;&lt;a href=&quot;#比特币相关主体&quot; class=&quot;headerlink&quot; title=&quot;比特币相关主体&quot;&gt;&lt;/a&gt;比特币相关主体&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;bitcoin core主要开发人员决定了规则的共识；&lt;/li&gt;
+&lt;li&gt;矿工决定了对交易历史记录的共识；
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="区域链技术驱动金融读书笔记" scheme="https://daiyongya.github.io/tags/%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E9%87%91%E8%9E%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>匿名性</title>
     <link href="https://daiyongya.github.io/2017/06/27/%E5%8C%BF%E5%90%8D%E6%80%A7/"/>
     <id>https://daiyongya.github.io/2017/06/27/匿名性/</id>
     <published>2017-06-27T15:35:44.000Z</published>
-    <updated>2017-06-27T16:19:26.127Z</updated>
+    <updated>2017-06-30T15:48:40.150Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="匿名常识"><a href="#匿名常识" class="headerlink" title="匿名常识"></a>匿名常识</h2><p>比特币匿名的两种解释：</p>
 <ol>
-<li>比特币的地址时公钥的哈希值，没有真实姓名等信息，是匿名；</li>
+<li>比特币的地址是公钥的哈希值，没有真实姓名等信息，是匿名；</li>
 <li>地址本身是一种虚拟标识，应该是化名，而不是匿名。<a id="more"></a>
 </li>
 </ol>
@@ -89,7 +186,7 @@
       &lt;hr&gt;
 &lt;h2 id=&quot;匿名常识&quot;&gt;&lt;a href=&quot;#匿名常识&quot; class=&quot;headerlink&quot; title=&quot;匿名常识&quot;&gt;&lt;/a&gt;匿名常识&lt;/h2&gt;&lt;p&gt;比特币匿名的两种解释：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;比特币的地址时公钥的哈希值，没有真实姓名等信息，是匿名；&lt;/li&gt;
+&lt;li&gt;比特币的地址是公钥的哈希值，没有真实姓名等信息，是匿名；&lt;/li&gt;
 &lt;li&gt;地址本身是一种虚拟标识，应该是化名，而不是匿名。
     
     </summary>
