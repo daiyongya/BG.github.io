@@ -102,7 +102,7 @@
 <meta property="og:url" content="https://daiyongya.github.io/2017/06/27/匿名性/index.html">
 <meta property="og:site_name" content="青涩了枷">
 <meta property="og:description" content="匿名常识比特币匿名的两种解释：  比特币的地址是公钥的哈希值，没有真实姓名等信息，是匿名； 地址本身是一种虚拟标识，应该是化名，而不是匿名。">
-<meta property="og:updated_time" content="2017-06-30T15:48:40.150Z">
+<meta property="og:updated_time" content="2017-07-02T10:04:49.279Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="匿名性">
 <meta name="twitter:description" content="匿名常识比特币匿名的两种解释：  比特币的地址是公钥的哈希值，没有真实姓名等信息，是匿名； 地址本身是一种虚拟标识，应该是化名，而不是匿名。">
@@ -374,13 +374,13 @@
 <li>同一交易交易双方不相关；</li>
 </ul>
 <p>第三条只能尽量避免，或者通过匿名集技术避免。为什么需要匿名呢？比特币账本是完全公开永久可追踪，如果匿名性不够好，将泄露所有交易隐私。比特币匿名性的目标是达到传统银行的匿名级别，后续超过。但匿名性与比特币本身的去中心化常常矛盾，需权衡处置。</p>
-<h2 id="去匿名化"><a href="#去匿名化" class="headerlink" title="去匿名化"></a>去匿名化</h2><p>可通过合帐交易，形成地址簇(clustering of addresses)，逐渐去匿名化。比如对交易地址进行聚类，或者先发生交易，再进行聚类打标。<br><strong>辨识个人账户方法</strong></p>
+<h2 id="去匿名化方法"><a href="#去匿名化方法" class="headerlink" title="去匿名化方法"></a>去匿名化方法</h2><p>可通过合帐交易，形成地址簇(clustering of addresses)，逐渐去匿名化。比如对交易地址进行聚类，或者先发生交易，再进行聚类打标。<br><strong>辨识个人账户方法</strong></p>
 <ul>
 <li>直接交易，找出部分地址，再进行聚类；</li>
 <li>通过服务提供商；</li>
 <li>找出个人疏忽信息；</li>
 </ul>
-<h2 id="混币-mixing"><a href="#混币-mixing" class="headerlink" title="混币(mixing)"></a>混币(mixing)</h2><p>技术逻辑为使用中介进行交易。部分钱包可以进行混币，但内部会保留信息，也会透露个人信息。有服务商专门提供混币，但安全会依赖服务商。<br><strong>混币准则</strong></p>
+<h2 id="混币-mixing-进行匿名"><a href="#混币-mixing-进行匿名" class="headerlink" title="混币(mixing)进行匿名"></a>混币(mixing)进行匿名</h2><p>技术逻辑为使用中介进行交易。部分钱包可以进行混币，但内部会保留信息，也会透露个人信息。有服务商专门提供混币，但安全会依赖服务商。<br><strong>混币准则</strong></p>
 <ul>
 <li>可多重混币；</li>
 <li>一致性交易，比如同样币值会的混币会降低匿名性；</li>
@@ -399,7 +399,7 @@
 <li>发送交易细节，签名输出；</li>
 <li>广播交易；</li>
 </ol>
-<h2 id="零币与零钞"><a href="#零币与零钞" class="headerlink" title="零币与零钞"></a>零币与零钞</h2><p>基础比(basecoin)概念，基础币和零币来回转换，保证新币与旧币的无关联性，将具有更好的匿名性。<br><strong>零知识验证</strong><br>如果能在不透露任何关键信息的情况下，能够证明一个声明是正确的，则具有零知识验证性质。比如不透露关键信息证明哈希谜题。<br>$H(X||<other inputs="">)target$<br>即在不告知x的情况下证明哈希谜题。<br>而零币可作为中介，帮助完成交易，但零币与比特币直接不存在关联，加强匿名性。零币铸币过程如下：</other></p>
+<h2 id="零币与零钞"><a href="#零币与零钞" class="headerlink" title="零币与零钞"></a>零币与零钞</h2><p>基础比(basecoin)概念，基础币和零币来回转换，保证新币与旧币的无关联性，将具有更好的匿名性。<br><strong>零知识验证</strong><br>如果能在不透露任何关键信息的情况下，能够证明一个声明是正确的，则具有零知识验证性质。比如不透露关键信息证明哈希谜题。<br>$H(X||\langle OTHER INPUTS\rangle)&lt;target$<br>即在不告知x的情况下证明哈希谜题。<br>而零币可作为中介，帮助完成交易，但零币与比特币直接不存在关联，加强匿名性。零币铸币过程如下：</p>
 <ol>
 <li>生存序列号S和随机密钥R；</li>
 <li>计算COMMIT(S,R),这是一个承诺；</li>
@@ -412,7 +412,7 @@
 <li>矿工查询S，保证未经使用；</li>
 <li>赎回新币到指定地址；</li>
 </ol>
-<p>每一个新币有特定S，一旦公布便不能再使用此零币，防止双重支付。<br><strong>零钞</strong><br>零钞系统是加强版匿名系统，零钞系统的交易不会把交易金额等关键信息进行公布，密码学证据保证了币的拆分及合并合法，系统只会公布交易的存在性及验证零知识验证所需要的关键信息，具体参考ZK-SNARKS技术。<br><strong>综合比较</strong></p>
+<p>每一个新币有特定S，一旦公布便不能再使用此零币，防止双重支付。<br><strong>零钞</strong><br>零钞系统是加强版匿名系统，零钞系统的交易不会把交易金额等关键信息进行公布，密码学证据保证了币的拆分及合并合法，系统只会公布交易的存在性及验证零知识验证所需要的关键信息，具体参考ZK-SNARKS技术。<br><strong>匿名性的综合比较</strong></p>
 <ol>
 <li>比特币：容易被交易图谱分析；</li>
 <li>人工混币：服务商与节点存在威胁；</li>
@@ -548,7 +548,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -612,7 +612,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名常识"><span class="nav-number">1.</span> <span class="nav-text">匿名常识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#去匿名化"><span class="nav-number">2.</span> <span class="nav-text">去匿名化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#混币-mixing"><span class="nav-number">3.</span> <span class="nav-text">混币(mixing)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分布式混币-Decentralized-mixing"><span class="nav-number">4.</span> <span class="nav-text">分布式混币(Decentralized mixing)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#零币与零钞"><span class="nav-number">5.</span> <span class="nav-text">零币与零钞</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名常识"><span class="nav-number">1.</span> <span class="nav-text">匿名常识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#去匿名化方法"><span class="nav-number">2.</span> <span class="nav-text">去匿名化方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#混币-mixing-进行匿名"><span class="nav-number">3.</span> <span class="nav-text">混币(mixing)进行匿名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分布式混币-Decentralized-mixing"><span class="nav-number">4.</span> <span class="nav-text">分布式混币(Decentralized mixing)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#零币与零钞"><span class="nav-number">5.</span> <span class="nav-text">零币与零钞</span></a></li></ol></div>
             
 
           </div>

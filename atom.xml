@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://daiyongya.github.io/"/>
-  <updated>2017-07-01T04:11:45.274Z</updated>
+  <updated>2017-07-02T09:57:30.260Z</updated>
   <id>https://daiyongya.github.io/</id>
   
   <author>
@@ -16,11 +16,97 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>另类币和加密货币生态系统</title>
+    <link href="https://daiyongya.github.io/2017/07/01/%E5%8F%A6%E7%B1%BB%E5%B8%81%E5%92%8C%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://daiyongya.github.io/2017/07/01/另类币和加密货币生态系统/</id>
+    <published>2017-07-01T10:21:12.000Z</published>
+    <updated>2017-07-02T09:57:30.260Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<h2 id="另类币是什么"><a href="#另类币是什么" class="headerlink" title="另类币是什么"></a>另类币是什么</h2><p>另类币主要是修改了比特币相关的参数，比如修改了挖矿难度系统，每块区块链的大小或者改变了比特币挖矿算法或者共识算法后形成的币。<a id="more"></a>另类币相对没那么流行，矿工较少，最重要的任务就是吸引矿工，保证有足够的矿工进行挖矿以保证能给对区块链进行正确的共识，而不被少数矿工所控制。但是当另类币一定程度上流行起来以后，又会有人想要拉高价格出货，跟股票类似，叫PUMP-AND-DUMP SCAMS，所以另类币发展也困难重重。另类币创世块后，对币的分发主要有以下策略：</p>
+<ol>
+<li>预留或预售一部分能够快速启动另类币的群体；</li>
+<li>给现有比特币的人群发放，条件是销毁或冻结等值比特币；</li>
+<li>把初试另类币赠送出去，普及开；</li>
+</ol>
+<p>比如以下币种：<br><strong>域名币</strong></p>
+<ul>
+<li>把域名/数值对(name/value)作为录入数据；</li>
+<li>只有首次录入者有权更改权限；<br>具体应用为，以后只需要在浏览器上输入baidu.bit即可访问百度。<br><strong>莱特币</strong>(lite coin)<br>和比特币最大的区别就是，莱特币采用了基于Scrypt算法的刚性内存(memory hard puzzles)解谜。<br><strong>比特币和另类币的关系</strong><br>有了比特币的普及以后，以后用户转向另类币也相对容易一些，何况另类币扩充了比特币的功能。</li>
+</ul>
+<h2 id="共同挖矿"><a href="#共同挖矿" class="headerlink" title="共同挖矿"></a>共同挖矿</h2><p>在另类币启动初期很容易被个人具有较大算力的矿工控制或者攻击，导致夭折。为了使另类币能够在比特币的基础上快速提高算力，有人利用比特币的基础设备对另类币进行共同挖矿，即同一套设备即可以产生比特币，也可以产生另类币，但此设备必须要使得交易记录在比特币和另类币中均有效，其中一种做法可以把另类币的交易概要放入比特币的币基交易里面。共同挖矿时候，可以计算出特殊的比特币区块，而此区块币基交易的输入脚本区域存有指向另类币区块的哈希指针，此区块身兼两职：</p>
+<ol>
+<li>对比特币客户端而言，此区块比较交易里面多了一个哈希值；</li>
+<li>而另类币用户只会关注币基交易里面的哈希值。</li>
+</ol>
+<h2 id="以太坊及智能合约"><a href="#以太坊及智能合约" class="headerlink" title="以太坊及智能合约"></a>以太坊及智能合约</h2><p>以太坊是一种加密货币系统，致力于提供一种满足图灵计算要求的可编程语言，可以通过编写脚本或合约实现域名币等功能。在以太坊平台上，如果某人缴费(产生交易)以后，通过以太坊平台编写的代码或者合约，把付款人的域名和地址进行绑定，便实现了功能。<br>以太坊引入了循环语句，为了解决无限循环带来的系统性问题，以太坊引入了燃料费，对所有计算进行扣费，如果费用用完，计算自动结束，便规避了无限循环带来的负面影响，故以太坊暂时还不能支持过于复杂的运算。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h2 id=&quot;另类币是什么&quot;&gt;&lt;a href=&quot;#另类币是什么&quot; class=&quot;headerlink&quot; title=&quot;另类币是什么&quot;&gt;&lt;/a&gt;另类币是什么&lt;/h2&gt;&lt;p&gt;另类币主要是修改了比特币相关的参数，比如修改了挖矿难度系统，每块区块链的大小或者改变了比特币挖矿算法或者共识算法后形成的币。
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="区域链技术驱动金融读书笔记" scheme="https://daiyongya.github.io/tags/%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E9%87%91%E8%9E%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>比特币应用</title>
+    <link href="https://daiyongya.github.io/2017/07/01/%E6%AF%94%E7%89%B9%E5%B8%81%E5%BA%94%E7%94%A8/"/>
+    <id>https://daiyongya.github.io/2017/07/01/比特币应用/</id>
+    <published>2017-07-01T04:18:50.000Z</published>
+    <updated>2017-07-02T09:54:58.039Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<h2 id="只增记录的应用"><a href="#只增记录的应用" class="headerlink" title="只增记录的应用"></a>只增记录的应用</h2><p><strong>安全时间戳及其应用</strong><br>secure timestamping，是利用比特币交易记录只可增加不可删除和更改的特性，对于一些需要证明却不能公布的事情进行备案记录。比如知道x数据，选一随机数r，进行$H(r||x)$哈希运算，然后广播于区域链上，可证明于公布时刻知道x但又未透露x具体细节，可用于专利证明。<br><a id="more"></a><br><strong>对未来事件预测</strong><br>某一些未来事件，比如有意身心健康的小赌，比如世界杯冠军预测，可提前把预测答案通过哈希运算，进行公布，最后出结果了再公布之前的预测结果。但是也存在一定漏洞，比如可以把所有可能的结果全部哈希运算后公布，最后只公布对的那个结果。也有人提出，可以通过报刊等公共媒体，比如把想要公布的内容刊登于某时间的报纸上，不过更多人认为还是比特币更好些，实现方式有几种，比如可以把想要公布的内容哈希运算，然后打很少的钱到此哈希地址去形成交易，然后记录。还有人提出可以用承诺币(commit coin)的方法，把内容生成一对私钥和公钥，用此公钥进行交易形成记录。<br><strong>op_return</strong><br>比特币有一个操作为$op\_return$，可以认为是一个函数调用，具体为$op\_return\langle H(data)\rangle$，此操作可因为返回错误代码而终止，但data由于产生了交易可以被记录下来，但是此方法需要产生一定的交易费。<br><strong>合约币</strong><br>合约币是一种附着币(overlay currencies)，以比特币为基础架构，把合约币的所有交易写入区块链，而不需要开发任何新的共识机制。</p>
+<h2 id="智能资产"><a href="#智能资产" class="headerlink" title="智能资产"></a>智能资产</h2><p>数字签名的安全性，可以给物理货币，比如人民币增加其他价值。比如可以在人民币上数字签名，作为某电影票的进场凭证，如果不违法，因此发展除了一种货币，叫染色币。<br><strong>染色币</strong>(colored coins)<br>在某一交易里面，添加进一些元数据特征，以便于追踪验证或其他用处便是染色过程。染色币的应用有“开放资产”(open asset)。原理为：如果一笔交易选择了一个P2SH地址，通过此地址后，此币便被染上了一种特定颜色，公布地址后便有了意义。染色了的币可以作为博物馆入场券等。也有其缺点，包括：</p>
+<ul>
+<li>会产生交易费；</li>
+<li>手机验证染色币较为困难；<br>染色比可以应用于以下场景：</li>
+</ul>
+<ol>
+<li>股票交易，1染色币可以代表1股，股票交易即变为比特币之染色比交易；</li>
+<li>物理使用权转换，比如汽车拥有权的交易；</li>
+</ol>
+<h2 id="打赌"><a href="#打赌" class="headerlink" title="打赌"></a>打赌</h2><p>如果三个人任意选择三个数，对三个数的余数进行打赌，</p>
+<ol>
+<li>选择一个打的任意数X,Y,Z，公布其哈希值H(X),H(Y),H(Z)，验证其具有明显差异；</li>
+<li>披露X,Y,Z，履行赌约。<br>第一步不公布X,Y,Z而公布其哈希值，是证明了其已选择好了X,Y,Z且不会改变，保证赌约公平。在第二步，为了防止有人最后找理由不公布其值而终止比赛，可设定一时间并交保证金，如果规定时间内未披露其值，直接扣除保证金。<br><strong>未来币</strong>(future coin)<br>未来币是一种去中心化的预测技术，伪代码如下：</li>
+<li>CreatMarket(event_id,arbitrator_key,num_outcome);</li>
+<li>BuyPartfolio(event_id);</li>
+<li>TradeShares();</li>
+<li>SellPartfolio(event_id);</li>
+<li>closeMarket();</li>
+</ol>
+<p>第一步CreatMarket如其意，可以对任何可以预测的结果创建一个赌约，然后授权arbitrator(可能是一个公钥)宣布结果执行赌约。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h2 id=&quot;只增记录的应用&quot;&gt;&lt;a href=&quot;#只增记录的应用&quot; class=&quot;headerlink&quot; title=&quot;只增记录的应用&quot;&gt;&lt;/a&gt;只增记录的应用&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;安全时间戳及其应用&lt;/strong&gt;&lt;br&gt;secure timestamping，是利用比特币交易记录只可增加不可删除和更改的特性，对于一些需要证明却不能公布的事情进行备案记录。比如知道x数据，选一随机数r，进行$H(r||x)$哈希运算，然后广播于区域链上，可证明于公布时刻知道x但又未透露x具体细节，可用于专利证明。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="区域链技术驱动金融读书笔记" scheme="https://daiyongya.github.io/tags/%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E9%87%91%E8%9E%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>其他挖矿算法</title>
     <link href="https://daiyongya.github.io/2017/06/30/%E5%85%B6%E4%BB%96%E6%8C%96%E7%9F%BF%E7%AE%97%E6%B3%95/"/>
     <id>https://daiyongya.github.io/2017/06/30/其他挖矿算法/</id>
     <published>2017-06-30T15:58:50.000Z</published>
-    <updated>2017-07-01T04:11:45.274Z</updated>
+    <updated>2017-07-02T10:09:59.616Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="挖矿算法基本要求"><a href="#挖矿算法基本要求" class="headerlink" title="挖矿算法基本要求"></a>挖矿算法基本要求</h2><p>可以作为挖矿的算法，必须具有以下性质：</p>
@@ -39,9 +125,9 @@
 <ol>
 <li>解谜区域机会均等，不可预测；</li>
 <li>解谜库永不枯竭；</li>
-<li>谜题通过算法自动生成；<br><em>质数币</em><br>质数币算法也具有比特币的三个特征，但解谜算法已改变。质数币是为质数找到一个“坎宁安链”(CUNNINGHAM CHAIN)。大致过程为：K个质数序列 $P_1,P_2,…,P_k$ ,使得$P<em>k=2P</em>{k-1}+1$ ,找到一个非质数的和。</li>
+<li>谜题通过算法自动生成；<br><em>质数币</em><br>质数币算法也具有比特币的三个特征，但解谜算法已改变。质数币是为质数找到一个“坎宁安链”(CUNNINGHAM CHAIN)。大致过程为：K个质数序列 $P_1,P_2,…,P_k$ ,使得$P<em>k=2P</em> {k-1}+1$ ,找到一个非质数的和。</li>
 </ol>
-<h2 id="矿池利弊"><a href="#矿池利弊" class="headerlink" title="矿池利弊"></a>矿池利弊</h2><p>矿池的形成对矿工来说可能是一件好事，可以平摊风险，按照算力进行平摊。矿池需具有以下特性：</p>
+<h2 id="矿池利弊"><a href="#矿池利弊" class="headerlink" title="矿池利弊"></a>矿池利弊</h2><p>矿池的形成对矿工来说可能是一件好事，可以平摊风险，平摊收入，按照算力进行平摊。矿池需具有以下特性：</p>
 <ol>
 <li>矿工可以很容易通过公分来证明其工作量；</li>
 <li>矿工必须按照矿池规则进行挖矿，而矿池作为整体收益，由于公钥被写进币基交易这点很容易办到。<br>但由于利益或者个人心情，部分矿工有可能挖到矿后不报导致作废，而还能得到公分，矿池将收到损失。如果增加一种协议，可以小额度奖励已经找到低等难度谜题答案的矿工，增加矿工的参与度而阻止矿池的形成。</li>
@@ -76,17 +162,17 @@
     <link href="https://daiyongya.github.io/2017/06/30/%E6%AF%94%E7%89%B9%E5%B8%81%E5%88%A9%E7%9B%8A%E7%9B%B8%E5%85%B3%E4%B8%BB%E4%BD%93/"/>
     <id>https://daiyongya.github.io/2017/06/30/比特币利益相关主体/</id>
     <published>2017-06-30T15:48:14.000Z</published>
-    <updated>2017-06-30T16:23:09.335Z</updated>
+    <updated>2017-07-02T09:42:36.979Z</updated>
     
     <content type="html"><![CDATA[<hr>
-<h2 id="比特币相关主体"><a href="#比特币相关主体" class="headerlink" title="比特币相关主体"></a>比特币相关主体</h2><ul>
+<h2 id="与比特币利益相关方有哪些"><a href="#与比特币利益相关方有哪些" class="headerlink" title="与比特币利益相关方有哪些"></a>与比特币利益相关方有哪些</h2><ul>
 <li>bitcoin core主要开发人员决定了规则的共识；</li>
 <li>矿工决定了对交易历史记录的共识；<a id="more"></a></li>
 <li>投资人购买并持有比特币，是对比特币价格的共识；</li>
 <li>商家及客户使用比特币进行交易，构成了比特币需求的共识；</li>
 <li>交易服务商，比如支持比特币付款的网上商城，可能是最大需求方；</li>
 </ul>
-<h2 id="关于政府监管的理由"><a href="#关于政府监管的理由" class="headerlink" title="关于政府监管的理由"></a>关于政府监管的理由</h2><ul>
+<h2 id="为什么需要政府监管"><a href="#为什么需要政府监管" class="headerlink" title="为什么需要政府监管"></a>为什么需要政府监管</h2><ul>
 <li>比特币可以轻易饶过政府监管，比如跨境的资金转移，境内买入，境外卖出，轻易破之；</li>
 <li>比特币的匿名性，使得各种犯罪，比如绑架勒索之类的更加难以追踪；</li>
 </ul>
@@ -99,7 +185,7 @@
     <summary type="html">
     
       &lt;hr&gt;
-&lt;h2 id=&quot;比特币相关主体&quot;&gt;&lt;a href=&quot;#比特币相关主体&quot; class=&quot;headerlink&quot; title=&quot;比特币相关主体&quot;&gt;&lt;/a&gt;比特币相关主体&lt;/h2&gt;&lt;ul&gt;
+&lt;h2 id=&quot;与比特币利益相关方有哪些&quot;&gt;&lt;a href=&quot;#与比特币利益相关方有哪些&quot; class=&quot;headerlink&quot; title=&quot;与比特币利益相关方有哪些&quot;&gt;&lt;/a&gt;与比特币利益相关方有哪些&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;bitcoin core主要开发人员决定了规则的共识；&lt;/li&gt;
 &lt;li&gt;矿工决定了对交易历史记录的共识；
     
@@ -117,7 +203,7 @@
     <link href="https://daiyongya.github.io/2017/06/27/%E5%8C%BF%E5%90%8D%E6%80%A7/"/>
     <id>https://daiyongya.github.io/2017/06/27/匿名性/</id>
     <published>2017-06-27T15:35:44.000Z</published>
-    <updated>2017-06-30T15:48:40.150Z</updated>
+    <updated>2017-07-02T10:04:49.279Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="匿名常识"><a href="#匿名常识" class="headerlink" title="匿名常识"></a>匿名常识</h2><p>比特币匿名的两种解释：</p>
@@ -133,13 +219,13 @@
 <li>同一交易交易双方不相关；</li>
 </ul>
 <p>第三条只能尽量避免，或者通过匿名集技术避免。为什么需要匿名呢？比特币账本是完全公开永久可追踪，如果匿名性不够好，将泄露所有交易隐私。比特币匿名性的目标是达到传统银行的匿名级别，后续超过。但匿名性与比特币本身的去中心化常常矛盾，需权衡处置。</p>
-<h2 id="去匿名化"><a href="#去匿名化" class="headerlink" title="去匿名化"></a>去匿名化</h2><p>可通过合帐交易，形成地址簇(clustering of addresses)，逐渐去匿名化。比如对交易地址进行聚类，或者先发生交易，再进行聚类打标。<br><strong>辨识个人账户方法</strong></p>
+<h2 id="去匿名化方法"><a href="#去匿名化方法" class="headerlink" title="去匿名化方法"></a>去匿名化方法</h2><p>可通过合帐交易，形成地址簇(clustering of addresses)，逐渐去匿名化。比如对交易地址进行聚类，或者先发生交易，再进行聚类打标。<br><strong>辨识个人账户方法</strong></p>
 <ul>
 <li>直接交易，找出部分地址，再进行聚类；</li>
 <li>通过服务提供商；</li>
 <li>找出个人疏忽信息；</li>
 </ul>
-<h2 id="混币-mixing"><a href="#混币-mixing" class="headerlink" title="混币(mixing)"></a>混币(mixing)</h2><p>技术逻辑为使用中介进行交易。部分钱包可以进行混币，但内部会保留信息，也会透露个人信息。有服务商专门提供混币，但安全会依赖服务商。<br><strong>混币准则</strong></p>
+<h2 id="混币-mixing-进行匿名"><a href="#混币-mixing-进行匿名" class="headerlink" title="混币(mixing)进行匿名"></a>混币(mixing)进行匿名</h2><p>技术逻辑为使用中介进行交易。部分钱包可以进行混币，但内部会保留信息，也会透露个人信息。有服务商专门提供混币，但安全会依赖服务商。<br><strong>混币准则</strong></p>
 <ul>
 <li>可多重混币；</li>
 <li>一致性交易，比如同样币值会的混币会降低匿名性；</li>
@@ -158,7 +244,7 @@
 <li>发送交易细节，签名输出；</li>
 <li>广播交易；</li>
 </ol>
-<h2 id="零币与零钞"><a href="#零币与零钞" class="headerlink" title="零币与零钞"></a>零币与零钞</h2><p>基础比(basecoin)概念，基础币和零币来回转换，保证新币与旧币的无关联性，将具有更好的匿名性。<br><strong>零知识验证</strong><br>如果能在不透露任何关键信息的情况下，能够证明一个声明是正确的，则具有零知识验证性质。比如不透露关键信息证明哈希谜题。<br>$H(X||<other inputs="">)target$<br>即在不告知x的情况下证明哈希谜题。<br>而零币可作为中介，帮助完成交易，但零币与比特币直接不存在关联，加强匿名性。零币铸币过程如下：</other></p>
+<h2 id="零币与零钞"><a href="#零币与零钞" class="headerlink" title="零币与零钞"></a>零币与零钞</h2><p>基础比(basecoin)概念，基础币和零币来回转换，保证新币与旧币的无关联性，将具有更好的匿名性。<br><strong>零知识验证</strong><br>如果能在不透露任何关键信息的情况下，能够证明一个声明是正确的，则具有零知识验证性质。比如不透露关键信息证明哈希谜题。<br>$H(X||\langle OTHER INPUTS\rangle)&lt;target$<br>即在不告知x的情况下证明哈希谜题。<br>而零币可作为中介，帮助完成交易，但零币与比特币直接不存在关联，加强匿名性。零币铸币过程如下：</p>
 <ol>
 <li>生存序列号S和随机密钥R；</li>
 <li>计算COMMIT(S,R),这是一个承诺；</li>
@@ -171,7 +257,7 @@
 <li>矿工查询S，保证未经使用；</li>
 <li>赎回新币到指定地址；</li>
 </ol>
-<p>每一个新币有特定S，一旦公布便不能再使用此零币，防止双重支付。<br><strong>零钞</strong><br>零钞系统是加强版匿名系统，零钞系统的交易不会把交易金额等关键信息进行公布，密码学证据保证了币的拆分及合并合法，系统只会公布交易的存在性及验证零知识验证所需要的关键信息，具体参考ZK-SNARKS技术。<br><strong>综合比较</strong></p>
+<p>每一个新币有特定S，一旦公布便不能再使用此零币，防止双重支付。<br><strong>零钞</strong><br>零钞系统是加强版匿名系统，零钞系统的交易不会把交易金额等关键信息进行公布，密码学证据保证了币的拆分及合并合法，系统只会公布交易的存在性及验证零知识验证所需要的关键信息，具体参考ZK-SNARKS技术。<br><strong>匿名性的综合比较</strong></p>
 <ol>
 <li>比特币：容易被交易图谱分析；</li>
 <li>人工混币：服务商与节点存在威胁；</li>
@@ -203,7 +289,7 @@
     <link href="https://daiyongya.github.io/2017/06/27/%E6%AF%94%E7%89%B9%E5%B8%81%E6%8C%96%E7%9F%BF/"/>
     <id>https://daiyongya.github.io/2017/06/27/比特币挖矿/</id>
     <published>2017-06-27T15:00:47.000Z</published>
-    <updated>2017-06-27T16:24:41.512Z</updated>
+    <updated>2017-07-02T09:48:11.960Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="挖矿-bitcoin-mining-任务"><a href="#挖矿-bitcoin-mining-任务" class="headerlink" title="挖矿(bitcoin mining)任务"></a>挖矿(bitcoin mining)任务</h2><p>加入比特币网络，然后完成以下任务：</p>
@@ -215,17 +301,17 @@
 <li>广播新区块链使得被接受；</li>
 <li>获得利润</li>
 </ol>
-<p><strong>寻找有效区块</strong><br>矿工任务为组织新的交易，形成梅克尔树，并让头部指针指向上一区块，尝试随机数使得整个区块链哈希值小于目标值，则挖矿成功。可改变的随机树包括区块头部的32位随机数，及区块内部币基交易的随机数。<br><strong>挖矿难度</strong><br>每产生2016个区块，挖矿难度重新计算，以保证平均每10分钟产生一个区块。</p>
-<h2 id="挖矿硬件"><a href="#挖矿硬件" class="headerlink" title="挖矿硬件"></a>挖矿硬件</h2><p>挖矿实质上是对SHA256函数的运算，从一开始从CPU，GPU，到FPGA，到现在的ASIC专用集成电路，小矿工生存空间越来越小。</p>
-<h2 id="矿池"><a href="#矿池" class="headerlink" title="矿池"></a>矿池</h2><p>由于过多专业玩家的加入，中小玩家生存空间越来越小。中小玩家为了生存，大玩家为了更加垄断，形成了抱团挖矿，即所谓的矿池。矿池运营基本模式为按照公分进行分工。什么是公分呢，比如新产生的哈希值前面是70个0，而某矿工找到了60个0的哈希值，此矿池的规则是大于55个0则计入公分，此矿工便拥有了一公分。如果此矿池挖到了新矿，则按照公分进行分红，部分矿池甚至每挖到一个公分就给矿工分钱。</p>
-<h2 id="挖矿激励即策略"><a href="#挖矿激励即策略" class="headerlink" title="挖矿激励即策略"></a>挖矿激励即策略</h2><p><strong>几个相关问题</strong></p>
+<p><strong>如何寻找有效区块</strong><br>矿工任务为组织新的交易，形成梅克尔树，并让头部指针指向上一区块，尝试随机数使得整个区块链哈希值小于目标值，则挖矿成功。可改变的随机树包括区块头部的32位随机数，及区块内部币基交易的随机数。<br><strong>挖矿难度的设置</strong><br>每产生2016个区块，挖矿难度重新计算，以保证平均每10分钟产生一个区块。</p>
+<h2 id="挖矿硬件的改变"><a href="#挖矿硬件的改变" class="headerlink" title="挖矿硬件的改变"></a>挖矿硬件的改变</h2><p>挖矿实质上是对SHA256函数的运算，从一开始从CPU，GPU，到FPGA，到现在的ASIC专用集成电路，小矿工生存空间越来越小。</p>
+<h2 id="矿池的形成及规则"><a href="#矿池的形成及规则" class="headerlink" title="矿池的形成及规则"></a>矿池的形成及规则</h2><p>由于过多专业玩家的加入，中小玩家生存空间越来越小。中小玩家为了生存，大玩家为了更加垄断，形成了抱团挖矿，即所谓的矿池。矿池运营基本模式为按照公分进行分工。什么是公分呢，比如新产生的哈希值前面是70个0，而某矿工找到了60个0的哈希值，此矿池的规则是大于55个0则计入公分，此矿工便拥有了一公分。如果此矿池挖到了新矿，则按照公分进行分红，部分矿池甚至每挖到一个公分就给矿工分钱。</p>
+<h2 id="挖矿激励及策略"><a href="#挖矿激励及策略" class="headerlink" title="挖矿激励及策略"></a>挖矿激励及策略</h2><p><strong>矿池中的矿工面临的几个问题</strong></p>
 <ul>
 <li>需包含哪些交易；</li>
 <li>对哪个区块进行挖矿；</li>
 <li>如果同时出现两个新区块，如何进行选择；</li>
 <li>什么时候宣布新区块；</li>
 </ul>
-<p><strong>分叉攻击</strong>(forking attack)<br>当算力超过0.5时，被分叉的区块超过了最长区块，会导致双重支付。当然也可通过贿赂具有算力的矿池进行攻击。<br><strong>临时保留区攻击</strong>(temporary block withholding attacks)<br>由于利益关系，部分矿工或矿池可能冒险，当区块被发现时不宣布，等到第二块区块发现时才宣布，中间时间如果有被发现的区块则会作废。<br><strong>黑名单与惩罚分叉攻击</strong>(punitive forking)<br>如果某矿工或矿池掌握算力，可拒绝某一用户交易，导致此用户比特币不可用。</p>
+<p><strong>分叉攻击</strong>(forking attack)<br>分叉攻击是在最后一个区块之前进行挖矿。当算力超过50%时，被分叉的区块超过了最长区块，会导致双重支付。当然也可通过贿赂具有算力的矿池进行攻击。<br><strong>临时保留区攻击</strong>(temporary block withholding attacks)<br>在矿池里，由于利益关系，部分矿工或矿池可能冒险，当区块被发现时不宣布，等到第二块区块发现时才宣布，中间时间如果有被发现的其他区块则会作废。<br><strong>黑名单与惩罚分叉攻击</strong>(punitive forking)<br>如果某矿工或矿池掌握绝对算力，可拒绝某一用户交易，导致此用户比特币不可用。</p>
 ]]></content>
     
     <summary type="html">
@@ -337,10 +423,10 @@
     <link href="https://daiyongya.github.io/2017/06/24/%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96/"/>
     <id>https://daiyongya.github.io/2017/06/24/数字货币去中心化/</id>
     <published>2017-06-24T14:49:15.000Z</published>
-    <updated>2017-06-24T15:40:48.050Z</updated>
+    <updated>2017-07-02T10:13:59.335Z</updated>
     
     <content type="html"><![CDATA[<hr>
-<h2 id="中心化相关问题"><a href="#中心化相关问题" class="headerlink" title="中心化相关问题"></a>中心化相关问题</h2><ul>
+<h2 id="如何判断是否中心化"><a href="#如何判断是否中心化" class="headerlink" title="如何判断是否中心化"></a>如何判断是否中心化</h2><ul>
 <li>谁来维护交易账本；</li>
 <li>谁来审核交易的有效性；</li>
 <li>谁来造币；</li>
@@ -348,7 +434,7 @@
 <li>如何取得交易价值；<a id="more"></a>
 </li>
 </ul>
-<h2 id="分布式共识-distributed-consensus"><a href="#分布式共识-distributed-consensus" class="headerlink" title="分布式共识(distributed consensus)"></a>分布式共识(distributed consensus)</h2><p>共识的输入值必须由诚实节点生成及决定。<br><strong>技术难题</strong>：</p>
+<h2 id="分布式共识-distributed-consensus"><a href="#分布式共识-distributed-consensus" class="headerlink" title="分布式共识(distributed consensus)"></a>分布式共识(distributed consensus)</h2><p>分布式共识是在很多人存在情况下，对某件事情如何达成一个共识。共识的输入值必须由诚实节点生成及决定。<br><strong>所有人都参与共识的难题</strong>：</p>
 <ol>
 <li>部分节点死机或者是恶意的；</li>
 <li>p2p网络不稳定，如果需要所有节点达成共识不现实；</li>
@@ -366,13 +452,13 @@
 <li>每个回合，某一个随机节点可以广播自己找到的区块；</li>
 <li>其他区块接受符合规则的区块并把哈希值放进自己的区块；</li>
 </ol>
-<p>比特币安全问题：</p>
+<p>比特币存在的安全问题：</p>
 <ul>
 <li>窃取比特币，由于无法伪造数字签名，通常会失败；</li>
 <li>拒绝服务攻击，由于服务任何节点都可提供，通常会失败；</li>
 <li>双重支付，由多重确认机制确保。</li>
 </ul>
-<h2 id="奖励机制与工作量证明"><a href="#奖励机制与工作量证明" class="headerlink" title="奖励机制与工作量证明"></a>奖励机制与工作量证明</h2><p>奖励种类：</p>
+<h2 id="奖励机制与工作量证明"><a href="#奖励机制与工作量证明" class="headerlink" title="奖励机制与工作量证明"></a>奖励机制与工作量证明</h2><p>比特币采用了奖励机制及工作量证明，其奖励种类如下：</p>
 <ul>
 <li>造币奖励；</li>
 <li>交易奖励；</li>
@@ -393,7 +479,7 @@
     <summary type="html">
     
       &lt;hr&gt;
-&lt;h2 id=&quot;中心化相关问题&quot;&gt;&lt;a href=&quot;#中心化相关问题&quot; class=&quot;headerlink&quot; title=&quot;中心化相关问题&quot;&gt;&lt;/a&gt;中心化相关问题&lt;/h2&gt;&lt;ul&gt;
+&lt;h2 id=&quot;如何判断是否中心化&quot;&gt;&lt;a href=&quot;#如何判断是否中心化&quot; class=&quot;headerlink&quot; title=&quot;如何判断是否中心化&quot;&gt;&lt;/a&gt;如何判断是否中心化&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;谁来维护交易账本；&lt;/li&gt;
 &lt;li&gt;谁来审核交易的有效性；&lt;/li&gt;
 &lt;li&gt;谁来造币；&lt;/li&gt;

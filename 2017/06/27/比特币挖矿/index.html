@@ -102,7 +102,7 @@
 <meta property="og:url" content="https://daiyongya.github.io/2017/06/27/比特币挖矿/index.html">
 <meta property="og:site_name" content="青涩了枷">
 <meta property="og:description" content="挖矿(bitcoin mining)任务加入比特币网络，然后完成以下任务：  监听交易广播，验证交易； 维护区块链网络和监听新的区块链，验证； 组装备选区块链；">
-<meta property="og:updated_time" content="2017-06-27T16:24:41.512Z">
+<meta property="og:updated_time" content="2017-07-02T09:48:11.960Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="比特币挖矿">
 <meta name="twitter:description" content="挖矿(bitcoin mining)任务加入比特币网络，然后完成以下任务：  监听交易广播，验证交易； 维护区块链网络和监听新的区块链，验证； 组装备选区块链；">
@@ -370,17 +370,17 @@
 <li>广播新区块链使得被接受；</li>
 <li>获得利润</li>
 </ol>
-<p><strong>寻找有效区块</strong><br>矿工任务为组织新的交易，形成梅克尔树，并让头部指针指向上一区块，尝试随机数使得整个区块链哈希值小于目标值，则挖矿成功。可改变的随机树包括区块头部的32位随机数，及区块内部币基交易的随机数。<br><strong>挖矿难度</strong><br>每产生2016个区块，挖矿难度重新计算，以保证平均每10分钟产生一个区块。</p>
-<h2 id="挖矿硬件"><a href="#挖矿硬件" class="headerlink" title="挖矿硬件"></a>挖矿硬件</h2><p>挖矿实质上是对SHA256函数的运算，从一开始从CPU，GPU，到FPGA，到现在的ASIC专用集成电路，小矿工生存空间越来越小。</p>
-<h2 id="矿池"><a href="#矿池" class="headerlink" title="矿池"></a>矿池</h2><p>由于过多专业玩家的加入，中小玩家生存空间越来越小。中小玩家为了生存，大玩家为了更加垄断，形成了抱团挖矿，即所谓的矿池。矿池运营基本模式为按照公分进行分工。什么是公分呢，比如新产生的哈希值前面是70个0，而某矿工找到了60个0的哈希值，此矿池的规则是大于55个0则计入公分，此矿工便拥有了一公分。如果此矿池挖到了新矿，则按照公分进行分红，部分矿池甚至每挖到一个公分就给矿工分钱。</p>
-<h2 id="挖矿激励即策略"><a href="#挖矿激励即策略" class="headerlink" title="挖矿激励即策略"></a>挖矿激励即策略</h2><p><strong>几个相关问题</strong></p>
+<p><strong>如何寻找有效区块</strong><br>矿工任务为组织新的交易，形成梅克尔树，并让头部指针指向上一区块，尝试随机数使得整个区块链哈希值小于目标值，则挖矿成功。可改变的随机树包括区块头部的32位随机数，及区块内部币基交易的随机数。<br><strong>挖矿难度的设置</strong><br>每产生2016个区块，挖矿难度重新计算，以保证平均每10分钟产生一个区块。</p>
+<h2 id="挖矿硬件的改变"><a href="#挖矿硬件的改变" class="headerlink" title="挖矿硬件的改变"></a>挖矿硬件的改变</h2><p>挖矿实质上是对SHA256函数的运算，从一开始从CPU，GPU，到FPGA，到现在的ASIC专用集成电路，小矿工生存空间越来越小。</p>
+<h2 id="矿池的形成及规则"><a href="#矿池的形成及规则" class="headerlink" title="矿池的形成及规则"></a>矿池的形成及规则</h2><p>由于过多专业玩家的加入，中小玩家生存空间越来越小。中小玩家为了生存，大玩家为了更加垄断，形成了抱团挖矿，即所谓的矿池。矿池运营基本模式为按照公分进行分工。什么是公分呢，比如新产生的哈希值前面是70个0，而某矿工找到了60个0的哈希值，此矿池的规则是大于55个0则计入公分，此矿工便拥有了一公分。如果此矿池挖到了新矿，则按照公分进行分红，部分矿池甚至每挖到一个公分就给矿工分钱。</p>
+<h2 id="挖矿激励及策略"><a href="#挖矿激励及策略" class="headerlink" title="挖矿激励及策略"></a>挖矿激励及策略</h2><p><strong>矿池中的矿工面临的几个问题</strong></p>
 <ul>
 <li>需包含哪些交易；</li>
 <li>对哪个区块进行挖矿；</li>
 <li>如果同时出现两个新区块，如何进行选择；</li>
 <li>什么时候宣布新区块；</li>
 </ul>
-<p><strong>分叉攻击</strong>(forking attack)<br>当算力超过0.5时，被分叉的区块超过了最长区块，会导致双重支付。当然也可通过贿赂具有算力的矿池进行攻击。<br><strong>临时保留区攻击</strong>(temporary block withholding attacks)<br>由于利益关系，部分矿工或矿池可能冒险，当区块被发现时不宣布，等到第二块区块发现时才宣布，中间时间如果有被发现的区块则会作废。<br><strong>黑名单与惩罚分叉攻击</strong>(punitive forking)<br>如果某矿工或矿池掌握算力，可拒绝某一用户交易，导致此用户比特币不可用。</p>
+<p><strong>分叉攻击</strong>(forking attack)<br>分叉攻击是在最后一个区块之前进行挖矿。当算力超过50%时，被分叉的区块超过了最长区块，会导致双重支付。当然也可通过贿赂具有算力的矿池进行攻击。<br><strong>临时保留区攻击</strong>(temporary block withholding attacks)<br>在矿池里，由于利益关系，部分矿工或矿池可能冒险，当区块被发现时不宣布，等到第二块区块发现时才宣布，中间时间如果有被发现的其他区块则会作废。<br><strong>黑名单与惩罚分叉攻击</strong>(punitive forking)<br>如果某矿工或矿池掌握绝对算力，可拒绝某一用户交易，导致此用户比特币不可用。</p>
 
       
     </div>
@@ -509,7 +509,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -573,7 +573,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#挖矿-bitcoin-mining-任务"><span class="nav-number">1.</span> <span class="nav-text">挖矿(bitcoin mining)任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挖矿硬件"><span class="nav-number">2.</span> <span class="nav-text">挖矿硬件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#矿池"><span class="nav-number">3.</span> <span class="nav-text">矿池</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挖矿激励即策略"><span class="nav-number">4.</span> <span class="nav-text">挖矿激励即策略</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#挖矿-bitcoin-mining-任务"><span class="nav-number">1.</span> <span class="nav-text">挖矿(bitcoin mining)任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挖矿硬件的改变"><span class="nav-number">2.</span> <span class="nav-text">挖矿硬件的改变</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#矿池的形成及规则"><span class="nav-number">3.</span> <span class="nav-text">矿池的形成及规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挖矿激励及策略"><span class="nav-number">4.</span> <span class="nav-text">挖矿激励及策略</span></a></li></ol></div>
             
 
           </div>
