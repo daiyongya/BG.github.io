@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://daiyongya.github.io/"/>
-  <updated>2017-07-02T09:57:30.260Z</updated>
+  <updated>2017-07-13T14:19:22.722Z</updated>
   <id>https://daiyongya.github.io/</id>
   
   <author>
@@ -16,11 +16,131 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>区块链通用功能</title>
+    <link href="https://daiyongya.github.io/2017/07/13/%E5%8C%BA%E5%9D%97%E9%93%BE%E9%80%9A%E7%94%A8%E5%8A%9F%E8%83%BD/"/>
+    <id>https://daiyongya.github.io/2017/07/13/区块链通用功能/</id>
+    <published>2017-07-13T14:11:05.000Z</published>
+    <updated>2017-07-13T14:19:22.722Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p>区块链作为一技术架构，提供了去中心化数据服务，其中包含了较多的技术细节。<br><a id="more"></a></p>
+<h2 id="链内服务"><a href="#链内服务" class="headerlink" title="链内服务"></a>链内服务</h2><ul>
+<li>时间戳</li>
+<li>签名证书</li>
+<li>Oracles认证</li>
+<li>身份认证管理</li>
+<li>投票</li>
+<li>智能合约管理</li>
+<li>标记</li>
+<li>信息</li>
+<li>资产连接</li>
+<li>存在性证明</li>
+</ul>
+<h2 id="用户视图"><a href="#用户视图" class="headerlink" title="用户视图"></a>用户视图</h2><ul>
+<li>命令行</li>
+<li>特殊浏览器</li>
+<li>钱包</li>
+<li>应用</li>
+<li>可下载客户端</li>
+</ul>
+<h2 id="链外服务"><a href="#链外服务" class="headerlink" title="链外服务"></a>链外服务</h2><ul>
+<li>声誉</li>
+<li>信息</li>
+<li>存储</li>
+<li>交换</li>
+<li>支付网关</li>
+</ul>
+<h2 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h2><ul>
+<li>API</li>
+<li>编程语言</li>
+<li>开发环境</li>
+<li>智能合约</li>
+<li>测试</li>
+<li>沙盘效应</li>
+</ul>
+<h2 id="内核协议"><a href="#内核协议" class="headerlink" title="内核协议"></a>内核协议</h2><ul>
+<li>P2P网络</li>
+<li>共识算法</li>
+<li>虚拟机</li>
+<li>历史记录</li>
+<li>状态余额</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;区块链作为一技术架构，提供了去中心化数据服务，其中包含了较多的技术细节。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="https://daiyongya.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="商业区块链读书笔记" scheme="https://daiyongya.github.io/tags/%E5%95%86%E4%B8%9A%E5%8C%BA%E5%9D%97%E9%93%BE%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Blockchain技术挑战</title>
+    <link href="https://daiyongya.github.io/2017/07/13/Blockchain%E6%8A%80%E6%9C%AF%E6%8C%91%E6%88%98/"/>
+    <id>https://daiyongya.github.io/2017/07/13/Blockchain技术挑战/</id>
+    <published>2017-07-13T14:00:31.000Z</published>
+    <updated>2017-07-13T14:12:01.787Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p>离开了物物交换以后，货币更多的作为一种价值载体，或是货币符号，一种信任符号，如果数字货币在不久的将来被较多人所信任能够作为价值的载体，区域链将大有可为，但也有较多挑战。<br><a id="more"></a></p>
+<h2 id="技术挑战"><a href="#技术挑战" class="headerlink" title="技术挑战"></a>技术挑战</h2><ul>
+<li>欠发达的基础设施；</li>
+<li>缺少成熟的应用；</li>
+<li>缺少更多的开发者；</li>
+<li>不成熟的中间件和工具；</li>
+<li>可扩展性待加强；</li>
+<li>遗留系统的冲突；</li>
+<li>缺乏标准；</li>
+</ul>
+<h2 id="商业挑战"><a href="#商业挑战" class="headerlink" title="商业挑战"></a>商业挑战</h2><ul>
+<li>如何把资产转移到区块链上；</li>
+<li>如何获得更多用户；</li>
+<li>初创公司死亡率过高；</li>
+<li>缺少标杆应用公司；</li>
+<li>技术替换的成本问题；</li>
+<li>创新者本身的窘境；</li>
+</ul>
+<h2 id="法律监管"><a href="#法律监管" class="headerlink" title="法律监管"></a>法律监管</h2><ul>
+<li>监管不清晰；</li>
+<li>政府干扰或者禁止；</li>
+<li>炒作导致泡沫；</li>
+<li>缺少税收、报告功能；</li>
+</ul>
+<h2 id="实施挑战"><a href="#实施挑战" class="headerlink" title="实施挑战"></a>实施挑战</h2><ul>
+<li>缺少对潜在价值的理解；</li>
+<li>执行不到位；</li>
+<li>改变管理的转变；</li>
+<li>较低的使用价值；</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;离开了物物交换以后，货币更多的作为一种价值载体，或是货币符号，一种信任符号，如果数字货币在不久的将来被较多人所信任能够作为价值的载体，区域链将大有可为，但也有较多挑战。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="https://daiyongya.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="商业区块链读书笔记" scheme="https://daiyongya.github.io/tags/%E5%95%86%E4%B8%9A%E5%8C%BA%E5%9D%97%E9%93%BE%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>另类币和加密货币生态系统</title>
     <link href="https://daiyongya.github.io/2017/07/01/%E5%8F%A6%E7%B1%BB%E5%B8%81%E5%92%8C%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F/"/>
     <id>https://daiyongya.github.io/2017/07/01/另类币和加密货币生态系统/</id>
     <published>2017-07-01T10:21:12.000Z</published>
-    <updated>2017-07-02T09:57:30.260Z</updated>
+    <updated>2017-07-13T14:21:07.534Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="另类币是什么"><a href="#另类币是什么" class="headerlink" title="另类币是什么"></a>另类币是什么</h2><p>另类币主要是修改了比特币相关的参数，比如修改了挖矿难度系统，每块区块链的大小或者改变了比特币挖矿算法或者共识算法后形成的币。<a id="more"></a>另类币相对没那么流行，矿工较少，最重要的任务就是吸引矿工，保证有足够的矿工进行挖矿以保证能给对区块链进行正确的共识，而不被少数矿工所控制。但是当另类币一定程度上流行起来以后，又会有人想要拉高价格出货，跟股票类似，叫PUMP-AND-DUMP SCAMS，所以另类币发展也困难重重。另类币创世块后，对币的分发主要有以下策略：</p>
@@ -49,7 +169,7 @@
     
     </summary>
     
-      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="读书笔记" scheme="https://daiyongya.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="区域链技术驱动金融读书笔记" scheme="https://daiyongya.github.io/tags/%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E9%87%91%E8%9E%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
@@ -61,7 +181,7 @@
     <link href="https://daiyongya.github.io/2017/07/01/%E6%AF%94%E7%89%B9%E5%B8%81%E5%BA%94%E7%94%A8/"/>
     <id>https://daiyongya.github.io/2017/07/01/比特币应用/</id>
     <published>2017-07-01T04:18:50.000Z</published>
-    <updated>2017-07-02T09:54:58.039Z</updated>
+    <updated>2017-07-13T14:20:33.380Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="只增记录的应用"><a href="#只增记录的应用" class="headerlink" title="只增记录的应用"></a>只增记录的应用</h2><p><strong>安全时间戳及其应用</strong><br>secure timestamping，是利用比特币交易记录只可增加不可删除和更改的特性，对于一些需要证明却不能公布的事情进行备案记录。比如知道x数据，选一随机数r，进行$H(r||x)$哈希运算，然后广播于区域链上，可证明于公布时刻知道x但又未透露x具体细节，可用于专利证明。<br><a id="more"></a><br><strong>对未来事件预测</strong><br>某一些未来事件，比如有意身心健康的小赌，比如世界杯冠军预测，可提前把预测答案通过哈希运算，进行公布，最后出结果了再公布之前的预测结果。但是也存在一定漏洞，比如可以把所有可能的结果全部哈希运算后公布，最后只公布对的那个结果。也有人提出，可以通过报刊等公共媒体，比如把想要公布的内容刊登于某时间的报纸上，不过更多人认为还是比特币更好些，实现方式有几种，比如可以把想要公布的内容哈希运算，然后打很少的钱到此哈希地址去形成交易，然后记录。还有人提出可以用承诺币(commit coin)的方法，把内容生成一对私钥和公钥，用此公钥进行交易形成记录。<br><strong>op_return</strong><br>比特币有一个操作为$op\_return$，可以认为是一个函数调用，具体为$op\_return\langle H(data)\rangle$，此操作可因为返回错误代码而终止，但data由于产生了交易可以被记录下来，但是此方法需要产生一定的交易费。<br><strong>合约币</strong><br>合约币是一种附着币(overlay currencies)，以比特币为基础架构，把合约币的所有交易写入区块链，而不需要开发任何新的共识机制。</p>
@@ -94,7 +214,7 @@
     
     </summary>
     
-      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="读书笔记" scheme="https://daiyongya.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="区域链技术驱动金融读书笔记" scheme="https://daiyongya.github.io/tags/%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E9%87%91%E8%9E%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
@@ -106,7 +226,7 @@
     <link href="https://daiyongya.github.io/2017/06/30/%E5%85%B6%E4%BB%96%E6%8C%96%E7%9F%BF%E7%AE%97%E6%B3%95/"/>
     <id>https://daiyongya.github.io/2017/06/30/其他挖矿算法/</id>
     <published>2017-06-30T15:58:50.000Z</published>
-    <updated>2017-07-02T10:09:59.616Z</updated>
+    <updated>2017-07-13T14:21:22.956Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="挖矿算法基本要求"><a href="#挖矿算法基本要求" class="headerlink" title="挖矿算法基本要求"></a>挖矿算法基本要求</h2><p>可以作为挖矿的算法，必须具有以下性质：</p>
@@ -150,7 +270,7 @@
     
     </summary>
     
-      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="读书笔记" scheme="https://daiyongya.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="区域链技术驱动金融读书笔记" scheme="https://daiyongya.github.io/tags/%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E9%87%91%E8%9E%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
@@ -162,7 +282,7 @@
     <link href="https://daiyongya.github.io/2017/06/30/%E6%AF%94%E7%89%B9%E5%B8%81%E5%88%A9%E7%9B%8A%E7%9B%B8%E5%85%B3%E4%B8%BB%E4%BD%93/"/>
     <id>https://daiyongya.github.io/2017/06/30/比特币利益相关主体/</id>
     <published>2017-06-30T15:48:14.000Z</published>
-    <updated>2017-07-02T09:42:36.979Z</updated>
+    <updated>2017-07-13T14:20:43.176Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="与比特币利益相关方有哪些"><a href="#与比特币利益相关方有哪些" class="headerlink" title="与比特币利益相关方有哪些"></a>与比特币利益相关方有哪些</h2><ul>
@@ -191,7 +311,7 @@
     
     </summary>
     
-      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="读书笔记" scheme="https://daiyongya.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="区域链技术驱动金融读书笔记" scheme="https://daiyongya.github.io/tags/%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E9%87%91%E8%9E%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
@@ -203,7 +323,7 @@
     <link href="https://daiyongya.github.io/2017/06/27/%E5%8C%BF%E5%90%8D%E6%80%A7/"/>
     <id>https://daiyongya.github.io/2017/06/27/匿名性/</id>
     <published>2017-06-27T15:35:44.000Z</published>
-    <updated>2017-07-02T10:04:49.279Z</updated>
+    <updated>2017-07-13T14:21:17.657Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="匿名常识"><a href="#匿名常识" class="headerlink" title="匿名常识"></a>匿名常识</h2><p>比特币匿名的两种解释：</p>
@@ -277,7 +397,7 @@
     
     </summary>
     
-      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="读书笔记" scheme="https://daiyongya.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="区域链技术驱动金融读书笔记" scheme="https://daiyongya.github.io/tags/%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E9%87%91%E8%9E%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
@@ -289,7 +409,7 @@
     <link href="https://daiyongya.github.io/2017/06/27/%E6%AF%94%E7%89%B9%E5%B8%81%E6%8C%96%E7%9F%BF/"/>
     <id>https://daiyongya.github.io/2017/06/27/比特币挖矿/</id>
     <published>2017-06-27T15:00:47.000Z</published>
-    <updated>2017-07-02T09:48:11.960Z</updated>
+    <updated>2017-07-13T14:20:37.651Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="挖矿-bitcoin-mining-任务"><a href="#挖矿-bitcoin-mining-任务" class="headerlink" title="挖矿(bitcoin mining)任务"></a>挖矿(bitcoin mining)任务</h2><p>加入比特币网络，然后完成以下任务：</p>
@@ -325,7 +445,7 @@
     
     </summary>
     
-      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="读书笔记" scheme="https://daiyongya.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="区域链技术驱动金融读书笔记" scheme="https://daiyongya.github.io/tags/%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E9%87%91%E8%9E%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
@@ -337,7 +457,7 @@
     <link href="https://daiyongya.github.io/2017/06/27/%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E5%AD%98%E5%82%A8%E5%92%8C%E4%BD%BF%E7%94%A8/"/>
     <id>https://daiyongya.github.io/2017/06/27/比特币的存储和使用/</id>
     <published>2017-06-27T13:43:06.000Z</published>
-    <updated>2017-06-27T14:53:08.433Z</updated>
+    <updated>2017-07-13T14:19:48.607Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <p>存储和管理比特币的实质是对私钥的管理，其三个目标是：可获取行、安全性、便利性。<br><a id="more"></a></p>
@@ -363,7 +483,7 @@
     
     </summary>
     
-      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="读书笔记" scheme="https://daiyongya.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="区域链技术驱动金融读书笔记" scheme="https://daiyongya.github.io/tags/%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E9%87%91%E8%9E%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
@@ -375,7 +495,7 @@
     <link href="https://daiyongya.github.io/2017/06/24/%E6%AF%94%E7%89%B9%E5%B8%81%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/"/>
     <id>https://daiyongya.github.io/2017/06/24/比特币运行机制/</id>
     <published>2017-06-24T15:44:10.000Z</published>
-    <updated>2017-06-24T16:17:51.245Z</updated>
+    <updated>2017-07-13T14:20:25.845Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="比特币的交易"><a href="#比特币的交易" class="headerlink" title="比特币的交易"></a>比特币的交易</h2><p>每笔交易包括输入、输出和唯一的识别ID，其中造币交易没有输入，只有输出，其他每笔交易必须引用币的ID来阐明来源。且每笔交易要么不消耗比特币，要么消耗完比特币，可把剩余的比特币输出给自己的另外一个地址，此时需要地址转换。<br><strong>交易验证</strong>：通过哈希指针来验证交易合法性，输出是否等于上一笔交易的剩余值，是否双重支付等。<br><strong>共同支付</strong>：可两个输入，一个输出，并由两个输入者共同签名进行支付。<br><a id="more"></a><br>交易数据数据结构：</p>
@@ -411,7 +531,7 @@
     
     </summary>
     
-      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="读书笔记" scheme="https://daiyongya.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="区域链技术驱动金融读书笔记" scheme="https://daiyongya.github.io/tags/%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E9%87%91%E8%9E%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
@@ -423,7 +543,7 @@
     <link href="https://daiyongya.github.io/2017/06/24/%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96/"/>
     <id>https://daiyongya.github.io/2017/06/24/数字货币去中心化/</id>
     <published>2017-06-24T14:49:15.000Z</published>
-    <updated>2017-07-02T10:13:59.335Z</updated>
+    <updated>2017-07-13T14:21:32.958Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="如何判断是否中心化"><a href="#如何判断是否中心化" class="headerlink" title="如何判断是否中心化"></a>如何判断是否中心化</h2><ul>
@@ -488,7 +608,7 @@
     
     </summary>
     
-      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="读书笔记" scheme="https://daiyongya.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="区域链技术驱动金融读书笔记" scheme="https://daiyongya.github.io/tags/%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E9%87%91%E8%9E%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
@@ -500,7 +620,7 @@
     <link href="https://daiyongya.github.io/2017/06/24/%E5%AF%86%E7%A0%81%E8%B4%A7%E5%B8%81%E6%A6%82%E8%BF%B0/"/>
     <id>https://daiyongya.github.io/2017/06/24/密码货币概述/</id>
     <published>2017-06-24T14:08:22.000Z</published>
-    <updated>2017-06-24T14:48:40.074Z</updated>
+    <updated>2017-07-13T14:21:12.299Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="密码学之哈希函数"><a href="#密码学之哈希函数" class="headerlink" title="密码学之哈希函数"></a>密码学之哈希函数</h2><p><strong>定义</strong>：输入为任意位数数值，经过某一函数后，输出为固定位数数值，这个函数必须具有以下三大特性：</p>
@@ -551,7 +671,7 @@
     
     </summary>
     
-      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="读书笔记" scheme="https://daiyongya.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="区域链技术驱动金融读书笔记" scheme="https://daiyongya.github.io/tags/%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E9%87%91%E8%9E%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
