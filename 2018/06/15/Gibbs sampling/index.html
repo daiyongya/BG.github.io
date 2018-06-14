@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  
+  <title>Linear regression based on Gibbs sampling | MORIARTY</title>
+  <meta name="author" content="NOBODY">
+  
+  <meta name="description" content="Oh you!">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Linear regression based on Gibbs sampling"/>
+  <meta property="og:site_name" content="MORIARTY"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?c40645d68ebfa17b0d3a435493272291";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+</head>
+
+ <body>  
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">MORIARTY</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class=""></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class=""></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">
+			<h1> Linear regression based on Gibbs sampling</h1>
+		</div>
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <hr>
+<h2 id="Bayesian-linear-regression"><a href="#Bayesian-linear-regression" class="headerlink" title="Bayesian linear regression"></a>Bayesian linear regression</h2><p>此实例为吉布斯采样基于线性回归的实现。<a id="more"></a>假设我们已经知道实数对$(y<em>{i},x</em>{i}),i=1,\cdots ,N$,以及$y<em>{i}\sim \mathcal{N}(\beta </em>{0}+\beta<em>{1}x</em>{i},1/\tau )$,根据分布的性质，也可以写成另外一种形式，$y<em>{i}=\beta </em>{0}+\beta<em>{1}x</em>{i}+\epsilon,\epsilon\sim \mathcal{N}(0,1/\tau )$,假设观察到的实数对相互独立的产生于同一个分布，其似然函数可以写成：<br>$$L(y<em>{1},\cdots ,y</em>{n},x<em>{1},\cdots,x</em>{n}\setminus \beta <em>{0},\beta</em>{1},\tau)=\prod<em>{i=1}^{N}\mathcal{N}(\beta</em>{0}+\beta<em>{1}x</em>{i},1/\tau)$$<br>为了便于计算，我们对参数取共轭先验：<br>$$\beta<em>{0}\sim \mathcal{N}(\mu </em>{0},1/\tau<em>{0})\\beta</em>{1}\sim \mathcal{N}(\mu <em>{1},1/\tau</em>{1})\\tau \sim Gamma(\alpha ,\beta )$$<br>这里有详细的slices推导，<a href="http://www.cs.toronto.edu/~radford/csc2541.S11/week3.pdf" target="_blank" rel="external">请点击</a></p>
+<h2 id="Gibbs基本方法介绍"><a href="#Gibbs基本方法介绍" class="headerlink" title="Gibbs基本方法介绍"></a>Gibbs基本方法介绍</h2><p>我们有两个参数$\theta<em>{1},\theta</em>{2}$，以及观测数据$x$，为了找到后验概率$p(\theta<em>{1},\theta</em>{2}\setminus x)$，我们做以下操作：</p>
+<p>1.以一定方法初始化$\theta_{2}^{i}$(比如随机初始化)</p>
+<p>2.此时根据已知采样$\theta<em>{1}^{i+1}\sim p(\theta</em>{1}\setminus\theta_{2}^{i}, x)$</p>
+<p>3.根据最新的值再采样$\theta<em>{2}^{i+1}\sim p(\theta</em>{2}\setminus\theta_{1}^{i+1}, x)$</p>
+<p>需要注意的是，需要交替的以最新值就行采样更新。</p>
+<h2 id="程序实现"><a href="#程序实现" class="headerlink" title="程序实现"></a>程序实现</h2><h3 id="导入包"><a href="#导入包" class="headerlink" title="导入包"></a>导入包</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> matplotlib <span class="keyword">as</span> plt</div><div class="line">%matplotlib inline</div><div class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div></pre></td></tr></table></figure>
+<h3 id="根据推导公式定义更新参数的函数"><a href="#根据推导公式定义更新参数的函数" class="headerlink" title="根据推导公式定义更新参数的函数"></a>根据推导公式定义更新参数的函数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">sample_beta_0</span><span class="params">(y, x, beta_1, tau, mu_0, tau_0)</span>:</span></div><div class="line">    N = len(y)</div><div class="line">    <span class="keyword">assert</span> len(x) == N</div><div class="line">    precision = tau_0 + tau * N</div><div class="line">    mean = tau_0 * mu_0 + tau * np.sum(y - beta_1 * x)</div><div class="line">    mean /= precision</div><div class="line">    <span class="keyword">return</span> np.random.normal(mean, <span class="number">1</span> / np.sqrt(precision))</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">sample_beta_1</span><span class="params">(y, x, beta_0, tau, mu_1, tau_1)</span>:</span></div><div class="line">    N = len(y)</div><div class="line">    <span class="keyword">assert</span> len(x) == N</div><div class="line">    precision = tau_1 + tau * np.sum(x * x)</div><div class="line">    mean = tau_1 * mu_1 + tau * np.sum( (y - beta_0) * x)</div><div class="line">    mean /= precision</div><div class="line">    <span class="keyword">return</span> np.random.normal(mean, <span class="number">1</span> / np.sqrt(precision))</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">sample_tau</span><span class="params">(y, x, beta_0, beta_1, alpha, beta)</span>:</span></div><div class="line">    N = len(y)</div><div class="line">    alpha_new = alpha + N / <span class="number">2</span></div><div class="line">    resid = y - beta_0 - beta_1 * x</div><div class="line">    beta_new = beta + np.sum(resid * resid) / <span class="number">2</span></div><div class="line">    <span class="keyword">return</span> np.random.gamma(alpha_new, <span class="number">1</span> / beta_new)</div></pre></td></tr></table></figure>
+<h3 id="产生数据"><a href="#产生数据" class="headerlink" title="产生数据"></a>产生数据</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">##设置数据参数的真实参数</span></div><div class="line">beta_0_true = <span class="number">-1</span></div><div class="line">beta_1_true = <span class="number">2</span></div><div class="line">tau_true = <span class="number">1</span></div><div class="line"><span class="comment">##根据真实参数生成数据</span></div><div class="line">N = <span class="number">50</span></div><div class="line">x = np.random.uniform(low = <span class="number">0</span>, high = <span class="number">4</span>, size = N)</div><div class="line">y = np.random.normal(beta_0_true + beta_1_true * x, <span class="number">1</span> / np.sqrt(tau_true))</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sns.stripplot(x,y)<span class="comment">#画出数据</span></div></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x27826bb4c50&gt;
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## specify initial values</span></div><div class="line">init = &#123;<span class="string">"beta_0"</span>: <span class="number">0</span>,</div><div class="line">        <span class="string">"beta_1"</span>: <span class="number">0</span>,</div><div class="line">        <span class="string">"tau"</span>: <span class="number">2</span>&#125;</div><div class="line"></div><div class="line"><span class="comment">## specify hyper parameters</span></div><div class="line">hypers = &#123;<span class="string">"mu_0"</span>: <span class="number">0</span>,</div><div class="line">         <span class="string">"tau_0"</span>: <span class="number">1</span>,</div><div class="line">         <span class="string">"mu_1"</span>: <span class="number">0</span>,</div><div class="line">         <span class="string">"tau_1"</span>: <span class="number">1</span>,</div><div class="line">         <span class="string">"alpha"</span>: <span class="number">2</span>,</div><div class="line">         <span class="string">"beta"</span>: <span class="number">1</span>&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">##定义Gibbs采样的主函数，把上面定义的几个函数按照逻辑组合起来形成一个采样过程</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">gibbs</span><span class="params">(y, x, iters, init, hypers)</span>:</span></div><div class="line">    <span class="keyword">assert</span> len(y) == len(x)</div><div class="line">    beta_0 = init[<span class="string">"beta_0"</span>]</div><div class="line">    beta_1 = init[<span class="string">"beta_1"</span>]</div><div class="line">    tau = init[<span class="string">"tau"</span>]</div><div class="line"></div><div class="line">    trace = np.zeros((iters, <span class="number">3</span>)) <span class="comment">## trace to store values of beta_0, beta_1, tau</span></div><div class="line"><span class="comment">##按照更新过程进行参数逐一更新</span></div><div class="line">    <span class="keyword">for</span> it <span class="keyword">in</span> range(iters):</div><div class="line">        beta_0 = sample_beta_0(y, x, beta_1, tau, hypers[<span class="string">"mu_0"</span>], hypers[<span class="string">"tau_0"</span>])</div><div class="line">        beta_1 = sample_beta_1(y, x, beta_0, tau, hypers[<span class="string">"mu_1"</span>], hypers[<span class="string">"tau_1"</span>])</div><div class="line">        tau = sample_tau(y, x, beta_0, beta_1, hypers[<span class="string">"alpha"</span>], hypers[<span class="string">"beta"</span>])</div><div class="line">        trace[it,:] = np.array((beta_0, beta_1, tau))</div><div class="line"></div><div class="line">    trace = pd.DataFrame(trace)</div><div class="line">    trace.columns = [<span class="string">'beta_0'</span>, <span class="string">'beta_1'</span>, <span class="string">'tau'</span>]</div><div class="line"></div><div class="line">    <span class="keyword">return</span> trace</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">iters = <span class="number">1000</span><span class="comment">##采样次数</span></div><div class="line">trace = gibbs(y, x, iters, init, hypers)</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">trace.plot()<span class="comment">##采样得到的数据可视化</span></div></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x27826c3c908&gt;
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">trace_burnt = trace[<span class="number">500</span>:<span class="number">999</span>]<span class="comment">##取后面500个采样</span></div><div class="line">hist_plot = trace_burnt.hist(bins = <span class="number">30</span>, layout = (<span class="number">1</span>,<span class="number">3</span>))</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">print(trace_burnt.median())</div><div class="line">print(trace_burnt.std())</div></pre></td></tr></table></figure>
+<pre><code>beta_0   -1.077110
+beta_1    1.903947
+tau       1.384544
+dtype: float64
+beta_0    0.229955
+beta_1    0.093329
+tau       0.288980
+dtype: float64
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">trace[<span class="number">1</span>:<span class="number">10</span>]</div></pre></td></tr></table></figure>
+<div><br><style><br>    .dataframe thead tr:only-child th {<br>        text-align: right;<br>    }<br><br>    .dataframe thead th {<br>        text-align: left;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>beta_0</th><br>      <th>beta_1</th><br>      <th>tau</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>1</th><br>      <td>1.317167</td><br>      <td>1.051728</td><br>      <td>0.445828</td><br>    </tr><br>    <tr><br>      <th>2</th><br>      <td>0.594940</td><br>      <td>1.256017</td><br>      <td>0.513077</td><br>    </tr><br>    <tr><br>      <th>3</th><br>      <td>0.134436</td><br>      <td>1.415097</td><br>      <td>0.769414</td><br>    </tr><br>    <tr><br>      <th>4</th><br>      <td>-0.123197</td><br>      <td>1.519084</td><br>      <td>0.968624</td><br>    </tr><br>    <tr><br>      <th>5</th><br>      <td>-0.073099</td><br>      <td>1.567300</td><br>      <td>0.633794</td><br>    </tr><br>    <tr><br>      <th>6</th><br>      <td>-0.525161</td><br>      <td>1.757552</td><br>      <td>0.974104</td><br>    </tr><br>    <tr><br>      <th>7</th><br>      <td>-0.843614</td><br>      <td>1.878984</td><br>      <td>1.751914</td><br>    </tr><br>    <tr><br>      <th>8</th><br>      <td>-0.876359</td><br>      <td>1.770635</td><br>      <td>1.376143</td><br>    </tr><br>    <tr><br>      <th>9</th><br>      <td>-0.890558</td><br>      <td>1.839191</td><br>      <td>1.723694</td><br>    </tr><br>  </tbody><br></table><br></div>
+
+
+
+<p>此为纯翻译摘抄版本，英文参见<a href="https://kieranrcampbell.github.io/blog/2016/05/15/gibbs-sampling-bayesian-linear-regression.html" target="_blank" rel="external">Gibbs sampling for Bayesian linear regression in Python</a></p>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+
+    
+    
+    <a type="button" class="btn btn-default disabled"><i class="fa fa-arrow-circle-o-left"></i>上一页</a>
+    
+
+    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+    
+    <a href="/2017/11/14/学习粒度选择/" type="button" class="btn btn-default ">下一页<i
+                class="fa fa-arrow-circle-o-right"></i></a>
+    
+
+    
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+    <h2 class="title">留言</h2>
+
+    
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2018-06-15 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/随笔/">随笔<span>2</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/机器学习/">机器学习<span>1</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2018 NOBODY
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a>,<a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>,<a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> and <a href="http://getbootstrap.com/" target="_blank">BOOTSTRA.386</a>. 
+     <br> Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind.386</a>.    
+</p>
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>⬆︎TOP</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+</body>
+   </html>
