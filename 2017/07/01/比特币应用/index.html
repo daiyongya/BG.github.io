@@ -1,114 +1,100 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-  <meta http-equiv="pragma" content="no-cache">
-  <meta http-equiv="cache-control" content="no-cache">
-  <meta http-equiv="expires" content="0">
   
   <title>比特币应用 | MORIARTY</title>
-  <meta name="author" content="NOBODY">
-  
-  <meta name="description" content="Oh you!">
-  
-  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <meta property="og:title" content="比特币应用"/>
-  <meta property="og:site_name" content="MORIARTY"/>
-
+  <meta name="description" content="只增记录的应用安全时间戳及其应用secure timestamping，是利用比特币交易记录只可增加不可删除和更改的特性，对于一些需要证明却不能公布的事情进行备案记录。比如知道x数据，选一随机数r，进行$H(r||x)$哈希运算，然后广播于区域链上，可证明于公布时刻知道x但又未透露x具体细节，可用于专利证明。">
+<meta name="keywords" content="区域链技术驱动金融读书笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="比特币应用">
+<meta property="og:url" content="https://daiyongya.github.io/2017/07/01/比特币应用/index.html">
+<meta property="og:site_name" content="MORIARTY">
+<meta property="og:description" content="只增记录的应用安全时间戳及其应用secure timestamping，是利用比特币交易记录只可增加不可删除和更改的特性，对于一些需要证明却不能公布的事情进行备案记录。比如知道x数据，选一随机数r，进行$H(r||x)$哈希运算，然后广播于区域链上，可证明于公布时刻知道x但又未透露x具体细节，可用于专利证明。">
+<meta property="og:updated_time" content="2017-11-14T12:38:03.388Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="比特币应用">
+<meta name="twitter:description" content="只增记录的应用安全时间戳及其应用secure timestamping，是利用比特币交易记录只可增加不可删除和更改的特性，对于一些需要证明却不能公布的事情进行备案记录。比如知道x数据，选一随机数r，进行$H(r||x)$哈希运算，然后广播于区域链上，可证明于公布时刻知道x但又未透露x具体细节，可用于专利证明。">
   
-    <meta property="og:image" content="undefined"/>
-  
-
+    <link rel="alternate" href="/atom.xml" title="MORIARTY" type="application/atom+xml">
   
   
-    <link href="/favicon.png" rel="icon">
+    <link rel="icon" href="/favicon.png">
   
   
-  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
-  <script src="/js/jquery-2.0.3.min.js"></script>
-
-  <!-- analytics -->
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
-
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?c40645d68ebfa17b0d3a435493272291";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-
+  <link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
 
 </head>
 
- <body>  
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-		<span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-	  <a class="navbar-brand" href="/">MORIARTY</a>
-      <div class="collapse navbar-collapse nav-menu">
-		<ul class="nav navbar-nav">
-		  
-		  <li>
-			<a href="/archives" title="All the articles.">
-			  <i class=""></i>Archives
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/about" title="About me.">
-			  <i class=""></i>About
-			</a>
-		  </li>
-		  
-		</ul>
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">MORIARTY</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">A problem has been detected</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://daiyongya.github.io"></form>
       </div>
-    </div> <!-- container -->
-</nav>
-<div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-比特币应用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/01/比特币应用/" class="article-date">
+  <time datetime="2017-07-01T04:18:50.000Z" itemprop="datePublished">2017-07-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/区块链/">区块链</a>
+  </div>
 
-  <div class="container">
-  	<div class="content">
-    	 
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      比特币应用
+    </h1>
+  
 
-
-	
-		<div class="page-header">
-			<h1> 比特币应用</h1>
-		</div>
-	
-
-
-
-<div class="row post">
-	<!-- cols -->
-	
-	<div id="top_meta"></div>
-	<div class="col-md-9">
-	
-
-	<!-- content -->
-	<div class="mypage">		
-	  		
-
-	  <hr>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
 <h2 id="只增记录的应用"><a href="#只增记录的应用" class="headerlink" title="只增记录的应用"></a>只增记录的应用</h2><p><strong>安全时间戳及其应用</strong><br>secure timestamping，是利用比特币交易记录只可增加不可删除和更改的特性，对于一些需要证明却不能公布的事情进行备案记录。比如知道x数据，选一随机数r，进行$H(r||x)$哈希运算，然后广播于区域链上，可证明于公布时刻知道x但又未透露x具体细节，可用于专利证明。<br><a id="more"></a><br><strong>对未来事件预测</strong><br>某一些未来事件，比如有意身心健康的小赌，比如世界杯冠军预测，可提前把预测答案通过哈希运算，进行公布，最后出结果了再公布之前的预测结果。但是也存在一定漏洞，比如可以把所有可能的结果全部哈希运算后公布，最后只公布对的那个结果。也有人提出，可以通过报刊等公共媒体，比如把想要公布的内容刊登于某时间的报纸上，不过更多人认为还是比特币更好些，实现方式有几种，比如可以把想要公布的内容哈希运算，然后打很少的钱到此哈希地址去形成交易，然后记录。还有人提出可以用承诺币(commit coin)的方法，把内容生成一对私钥和公钥，用此公钥进行交易形成记录。<br><strong>op_return</strong><br>比特币有一个操作为$op\_return$，可以认为是一个函数调用，具体为$op\_return\langle H(data)\rangle$，此操作可因为返回错误代码而终止，但data由于产生了交易可以被记录下来，但是此方法需要产生一定的交易费。<br><strong>合约币</strong><br>合约币是一种附着币(overlay currencies)，以比特币为基础架构，把合约币的所有交易写入区块链，而不需要开发任何新的共识机制。</p>
 <h2 id="智能资产"><a href="#智能资产" class="headerlink" title="智能资产"></a>智能资产</h2><p>数字签名的安全性，可以给物理货币，比如人民币增加其他价值。比如可以在人民币上数字签名，作为某电影票的进场凭证，如果不违法，因此发展除了一种货币，叫染色币。<br><strong>染色币</strong>(colored coins)<br>在某一交易里面，添加进一些元数据特征，以便于追踪验证或其他用处便是染色过程。染色币的应用有“开放资产”(open asset)。原理为：如果一笔交易选择了一个P2SH地址，通过此地址后，此币便被染上了一种特定颜色，公布地址后便有了意义。染色了的币可以作为博物馆入场券等。也有其缺点，包括：</p>
 <ul>
@@ -130,139 +116,147 @@ var _hmt = _hmt || [];
 <li>closeMarket();</li>
 </ol>
 <p>第一步CreatMarket如其意，可以对任何可以预测的结果创建一个赌约，然后授权arbitrator(可能是一个公钥)宣布结果执行赌约。</p>
-	  
-	</div>
 
-	<div>
-  	<center>
-	<div class="pagination">
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://daiyongya.github.io/2017/07/01/比特币应用/" data-id="cjig4g9rt001540vxin2r1dd2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区域链技术驱动金融读书笔记/">区域链技术驱动金融读书笔记</a></li></ul>
 
-    
-    
-    <a href="/2017/07/01/另类币和加密货币生态系统/" type="button" class="btn btn-default"><i
-                class="fa fa-arrow-circle-o-left"></i> 上一页</a>
-    
-
-    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
-    
-    <a href="/2017/06/30/其他挖矿算法/" type="button" class="btn btn-default ">下一页<i
-                class="fa fa-arrow-circle-o-right"></i></a>
-    
-
-    
-</div>
-
-    </center>
-	</div>
-	
-	<!-- comment -->
-	
-<section id="comment">
-    <h2 class="title">留言</h2>
-
-    
-</section>
-
-
-	</div> <!-- col-md-9/col-md-12 -->
-		
-	
-	<div id="side_meta">
-		<div class="col-md-3" id="post_meta"> 
-
-	<!-- date -->
-	
-	<div class="meta-widget">
-	<i class="fa fa-clock-o"></i>
-	2017-07-01 
-	</div>
-	
-
-	<!-- categories -->
-    
-	<div class="meta-widget">
-	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
-    <ul id="categorys" class="tag_box list-unstyled collapse in">
-          
-  <li>
-    <li><a href="/categories/区块链/">区块链<span>14</span></a></li>
-  </li>
-
-    </ul>
-	</div>
-	
-
-	<!-- tags -->
-	
-	<div class="meta-widget">
-	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
-    <ul id="tags" class="tag_box list-unstyled collapse in">	  
-	    
-  <li><a href="/tags/区域链技术驱动金融读书笔记/">区域链技术驱动金融读书笔记<span>10</span></a></li>
-    </ul>
-	</div>
-		
-
-	<!-- toc -->
-	<div class="meta-widget">
-	
-	</div>
-	
-    <hr>
-	
-</div><!-- col-md-3 -->
-
-	</div>
-		
-
-</div><!-- row -->
-
-
-
-	</div>
+    </footer>
   </div>
-  <div class="container-narrow">
-  <footer> <p>
-  &copy; 2018 NOBODY
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a>,<a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>,<a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> and <a href="http://getbootstrap.com/" target="_blank">BOOTSTRA.386</a>. 
-     <br> Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind.386</a>.    
-</p>
- </footer>
-</div> <!-- container-narrow -->
+    
+<nav id="article-nav">
   
+    <a href="/2017/07/01/另类币和加密货币生态系统/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          另类币和加密货币生态系统
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/06/30/其他挖矿算法/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">其他挖矿算法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/区块链/">区块链</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a></li></ul>
+    </div>
+  </div>
 
 
   
-<a id="gotop" href="#">   
-  <span>⬆︎TOP</span>
-</a>
-
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/search.js"></script> 
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/区域链/">区域链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区域链技术驱动金融读书笔记/">区域链技术驱动金融读书笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/商业区块链读书笔记/">商业区块链读书笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习感想/">学习感想</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习/">机器学习</a></li></ul>
+    </div>
+  </div>
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/区域链/" style="font-size: 10px;">区域链</a> <a href="/tags/区域链技术驱动金融读书笔记/" style="font-size: 20px;">区域链技术驱动金融读书笔记</a> <a href="/tags/商业区块链读书笔记/" style="font-size: 15px;">商业区块链读书笔记</a> <a href="/tags/学习感想/" style="font-size: 10px;">学习感想</a> <a href="/tags/机器学习/" style="font-size: 10px;">机器学习</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li></ul>
+    </div>
+  </div>
 
 
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/06/15/Gibbs sampling/">Linear regression based on Gibbs sampling</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/14/学习粒度选择/">学习粒度选择</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/13/区块链通用功能/">区块链通用功能</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/13/Blockchain技术挑战/">Blockchain技术挑战</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/01/另类币和加密货币生态系统/">另类币和加密货币生态系统</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 
-   <script type="text/javascript">      
-     var search_path = "search.xml";
-	 if (search_path.length == 0) {
-	 	search_path = "search.xml";
-	 }
-	 var path = "/" + search_path;
-     searchFunc(path, 'local-search-input', 'local-search-result');
-   </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 NOBODY<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -280,6 +274,5 @@ var _hmt = _hmt || [];
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
-
 </body>
-   </html>
+</html>

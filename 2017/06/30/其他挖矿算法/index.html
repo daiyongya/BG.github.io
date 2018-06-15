@@ -1,114 +1,100 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-  <meta http-equiv="pragma" content="no-cache">
-  <meta http-equiv="cache-control" content="no-cache">
-  <meta http-equiv="expires" content="0">
   
   <title>其他挖矿算法 | MORIARTY</title>
-  <meta name="author" content="NOBODY">
-  
-  <meta name="description" content="Oh you!">
-  
-  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <meta property="og:title" content="其他挖矿算法"/>
-  <meta property="og:site_name" content="MORIARTY"/>
-
+  <meta name="description" content="挖矿算法基本要求可以作为挖矿的算法，必须具有以下性质：  挖矿难度可调整，以保证计算力的增减不会导致挖矿速度急速变化； 挖矿结果可以快速验证； 能给买个矿工一定概率挖到矿，不然挖矿算力被控制以后将导致区块链出错；">
+<meta name="keywords" content="区域链技术驱动金融读书笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="其他挖矿算法">
+<meta property="og:url" content="https://daiyongya.github.io/2017/06/30/其他挖矿算法/index.html">
+<meta property="og:site_name" content="MORIARTY">
+<meta property="og:description" content="挖矿算法基本要求可以作为挖矿的算法，必须具有以下性质：  挖矿难度可调整，以保证计算力的增减不会导致挖矿速度急速变化； 挖矿结果可以快速验证； 能给买个矿工一定概率挖到矿，不然挖矿算力被控制以后将导致区块链出错；">
+<meta property="og:updated_time" content="2017-11-14T12:38:42.092Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="其他挖矿算法">
+<meta name="twitter:description" content="挖矿算法基本要求可以作为挖矿的算法，必须具有以下性质：  挖矿难度可调整，以保证计算力的增减不会导致挖矿速度急速变化； 挖矿结果可以快速验证； 能给买个矿工一定概率挖到矿，不然挖矿算力被控制以后将导致区块链出错；">
   
-    <meta property="og:image" content="undefined"/>
-  
-
+    <link rel="alternate" href="/atom.xml" title="MORIARTY" type="application/atom+xml">
   
   
-    <link href="/favicon.png" rel="icon">
+    <link rel="icon" href="/favicon.png">
   
   
-  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
-  <script src="/js/jquery-2.0.3.min.js"></script>
-
-  <!-- analytics -->
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
-
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?c40645d68ebfa17b0d3a435493272291";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-
+  <link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
 
 </head>
 
- <body>  
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-		<span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-	  <a class="navbar-brand" href="/">MORIARTY</a>
-      <div class="collapse navbar-collapse nav-menu">
-		<ul class="nav navbar-nav">
-		  
-		  <li>
-			<a href="/archives" title="All the articles.">
-			  <i class=""></i>Archives
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/about" title="About me.">
-			  <i class=""></i>About
-			</a>
-		  </li>
-		  
-		</ul>
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">MORIARTY</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">A problem has been detected</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://daiyongya.github.io"></form>
       </div>
-    </div> <!-- container -->
-</nav>
-<div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-其他挖矿算法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/30/其他挖矿算法/" class="article-date">
+  <time datetime="2017-06-30T15:58:50.000Z" itemprop="datePublished">2017-06-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/区块链/">区块链</a>
+  </div>
 
-  <div class="container">
-  	<div class="content">
-    	 
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      其他挖矿算法
+    </h1>
+  
 
-
-	
-		<div class="page-header">
-			<h1> 其他挖矿算法</h1>
-		</div>
-	
-
-
-
-<div class="row post">
-	<!-- cols -->
-	
-	<div id="top_meta"></div>
-	<div class="col-md-9">
-	
-
-	<!-- content -->
-	<div class="mypage">		
-	  		
-
-	  <hr>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
 <h2 id="挖矿算法基本要求"><a href="#挖矿算法基本要求" class="headerlink" title="挖矿算法基本要求"></a>挖矿算法基本要求</h2><p>可以作为挖矿的算法，必须具有以下性质：</p>
 <ol>
 <li>挖矿难度可调整，以保证计算力的增减不会导致挖矿速度急速变化；</li>
@@ -137,139 +123,147 @@ var _hmt = _hmt || [];
 <li>可以对挖矿能力今昔“蓄力”(save up)，可能导致分叉；</li>
 <li>如果拥有51%筹码，可以只在自己认可的区域链上挖矿，控制整个区域链。</li>
 </ul>
-	  
-	</div>
 
-	<div>
-  	<center>
-	<div class="pagination">
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://daiyongya.github.io/2017/06/30/其他挖矿算法/" data-id="cjig4g9qw000840vx5qs8oqfi" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区域链技术驱动金融读书笔记/">区域链技术驱动金融读书笔记</a></li></ul>
 
-    
-    
-    <a href="/2017/07/01/比特币应用/" type="button" class="btn btn-default"><i
-                class="fa fa-arrow-circle-o-left"></i> 上一页</a>
-    
-
-    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
-    
-    <a href="/2017/06/30/比特币利益相关主体/" type="button" class="btn btn-default ">下一页<i
-                class="fa fa-arrow-circle-o-right"></i></a>
-    
-
-    
-</div>
-
-    </center>
-	</div>
-	
-	<!-- comment -->
-	
-<section id="comment">
-    <h2 class="title">留言</h2>
-
-    
-</section>
-
-
-	</div> <!-- col-md-9/col-md-12 -->
-		
-	
-	<div id="side_meta">
-		<div class="col-md-3" id="post_meta"> 
-
-	<!-- date -->
-	
-	<div class="meta-widget">
-	<i class="fa fa-clock-o"></i>
-	2017-06-30 
-	</div>
-	
-
-	<!-- categories -->
-    
-	<div class="meta-widget">
-	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
-    <ul id="categorys" class="tag_box list-unstyled collapse in">
-          
-  <li>
-    <li><a href="/categories/区块链/">区块链<span>14</span></a></li>
-  </li>
-
-    </ul>
-	</div>
-	
-
-	<!-- tags -->
-	
-	<div class="meta-widget">
-	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
-    <ul id="tags" class="tag_box list-unstyled collapse in">	  
-	    
-  <li><a href="/tags/区域链技术驱动金融读书笔记/">区域链技术驱动金融读书笔记<span>10</span></a></li>
-    </ul>
-	</div>
-		
-
-	<!-- toc -->
-	<div class="meta-widget">
-	
-	</div>
-	
-    <hr>
-	
-</div><!-- col-md-3 -->
-
-	</div>
-		
-
-</div><!-- row -->
-
-
-
-	</div>
+    </footer>
   </div>
-  <div class="container-narrow">
-  <footer> <p>
-  &copy; 2018 NOBODY
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a>,<a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>,<a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> and <a href="http://getbootstrap.com/" target="_blank">BOOTSTRA.386</a>. 
-     <br> Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind.386</a>.    
-</p>
- </footer>
-</div> <!-- container-narrow -->
+    
+<nav id="article-nav">
   
+    <a href="/2017/07/01/比特币应用/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          比特币应用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/06/30/比特币利益相关主体/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">比特币利益相关主体</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/区块链/">区块链</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a></li></ul>
+    </div>
+  </div>
 
 
   
-<a id="gotop" href="#">   
-  <span>⬆︎TOP</span>
-</a>
-
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/search.js"></script> 
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/区域链/">区域链</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区域链技术驱动金融读书笔记/">区域链技术驱动金融读书笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/商业区块链读书笔记/">商业区块链读书笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习感想/">学习感想</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习/">机器学习</a></li></ul>
+    </div>
+  </div>
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/区域链/" style="font-size: 10px;">区域链</a> <a href="/tags/区域链技术驱动金融读书笔记/" style="font-size: 20px;">区域链技术驱动金融读书笔记</a> <a href="/tags/商业区块链读书笔记/" style="font-size: 15px;">商业区块链读书笔记</a> <a href="/tags/学习感想/" style="font-size: 10px;">学习感想</a> <a href="/tags/机器学习/" style="font-size: 10px;">机器学习</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li></ul>
+    </div>
+  </div>
 
 
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/06/15/Gibbs sampling/">Linear regression based on Gibbs sampling</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/14/学习粒度选择/">学习粒度选择</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/13/区块链通用功能/">区块链通用功能</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/13/Blockchain技术挑战/">Blockchain技术挑战</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/01/另类币和加密货币生态系统/">另类币和加密货币生态系统</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 
-   <script type="text/javascript">      
-     var search_path = "search.xml";
-	 if (search_path.length == 0) {
-	 	search_path = "search.xml";
-	 }
-	 var path = "/" + search_path;
-     searchFunc(path, 'local-search-input', 'local-search-result');
-   </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 NOBODY<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -287,6 +281,5 @@ var _hmt = _hmt || [];
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
-
 </body>
-   </html>
+</html>
