@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://daiyongya.github.io/"/>
-  <updated>2018-06-15T11:20:04.927Z</updated>
+  <updated>2018-06-15T11:20:04.928Z</updated>
   <id>https://daiyongya.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://daiyongya.github.io/2018/06/15/Gibbs%20sampling/"/>
     <id>https://daiyongya.github.io/2018/06/15/Gibbs sampling/</id>
     <published>2018-06-14T16:28:06.000Z</published>
-    <updated>2018-06-15T11:20:04.927Z</updated>
+    <updated>2018-06-15T11:20:04.928Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="Bayesian-linear-regression"><a href="#Bayesian-linear-regression" class="headerlink" title="Bayesian linear regression"></a>Bayesian linear regression</h2><p>此实例为吉布斯采样基于线性回归的实现。<a id="more"></a><br>假设我们已经知道实数对 $(y_i,x<em>i),i=1,\cdots ,N$,以及$y</em>{i}\sim \mathcal{N}(\beta <em>{0}+\beta</em>{1}x<em>{i},1/\tau )$,根据分布的性质，也可以写成另外一种形式，$y</em>{i}=\beta <em>{0}+\beta</em>{1}x<em>{i}+\epsilon,\epsilon\sim \mathcal{N}(0,1/\tau )$,假设观察到的实数对相互独立的产生于同一个分布，其似然函数可以写成：<br>$$L(y</em>{1},\cdots ,y<em>{n},x</em>{1},\cdots,x<em>{n}\setminus \beta </em>{0},\beta<em>{1},\tau)=\prod</em>{i=1}^{N}\mathcal{N}(\beta<em>{0}+\beta</em>{1}x<em>{i},1/\tau)$$<br>为了便于计算，我们对参数取共轭先验：<br>$$\beta</em>{0}\sim \mathcal{N}(\mu <em>{0},1/\tau</em>{0})\\beta<em>{1}\sim \mathcal{N}(\mu </em>{1},1/\tau_{1})\\tau \sim Gamma(\alpha ,\beta )$$<br>这里有详细的slices推导，<a href="http://www.cs.toronto.edu/~radford/csc2541.S11/week3.pdf" target="_blank" rel="external">请点击</a></p>
@@ -108,7 +108,7 @@ dtype: float64
     <link href="https://daiyongya.github.io/2017/07/13/%E5%8C%BA%E5%9D%97%E9%93%BE%E9%80%9A%E7%94%A8%E5%8A%9F%E8%83%BD/"/>
     <id>https://daiyongya.github.io/2017/07/13/区块链通用功能/</id>
     <published>2017-07-13T14:11:05.000Z</published>
-    <updated>2017-11-14T12:38:48.198Z</updated>
+    <updated>2017-11-14T12:38:48.199Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <p>区块链作为一技术架构，提供了去中心化数据服务，其中包含了较多的技术细节。<br><a id="more"></a></p>
@@ -269,7 +269,7 @@ dtype: float64
     <link href="https://daiyongya.github.io/2017/07/01/%E6%AF%94%E7%89%B9%E5%B8%81%E5%BA%94%E7%94%A8/"/>
     <id>https://daiyongya.github.io/2017/07/01/比特币应用/</id>
     <published>2017-07-01T04:18:50.000Z</published>
-    <updated>2017-11-14T12:38:03.387Z</updated>
+    <updated>2017-11-14T12:38:03.388Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="只增记录的应用"><a href="#只增记录的应用" class="headerlink" title="只增记录的应用"></a>只增记录的应用</h2><p><strong>安全时间戳及其应用</strong><br>secure timestamping，是利用比特币交易记录只可增加不可删除和更改的特性，对于一些需要证明却不能公布的事情进行备案记录。比如知道x数据，选一随机数r，进行$H(r||x)$哈希运算，然后广播于区域链上，可证明于公布时刻知道x但又未透露x具体细节，可用于专利证明。<br><a id="more"></a><br><strong>对未来事件预测</strong><br>某一些未来事件，比如有意身心健康的小赌，比如世界杯冠军预测，可提前把预测答案通过哈希运算，进行公布，最后出结果了再公布之前的预测结果。但是也存在一定漏洞，比如可以把所有可能的结果全部哈希运算后公布，最后只公布对的那个结果。也有人提出，可以通过报刊等公共媒体，比如把想要公布的内容刊登于某时间的报纸上，不过更多人认为还是比特币更好些，实现方式有几种，比如可以把想要公布的内容哈希运算，然后打很少的钱到此哈希地址去形成交易，然后记录。还有人提出可以用承诺币(commit coin)的方法，把内容生成一对私钥和公钥，用此公钥进行交易形成记录。<br><strong>op_return</strong><br>比特币有一个操作为$op\_return$，可以认为是一个函数调用，具体为$op\_return\langle H(data)\rangle$，此操作可因为返回错误代码而终止，但data由于产生了交易可以被记录下来，但是此方法需要产生一定的交易费。<br><strong>合约币</strong><br>合约币是一种附着币(overlay currencies)，以比特币为基础架构，把合约币的所有交易写入区块链，而不需要开发任何新的共识机制。</p>
@@ -314,7 +314,7 @@ dtype: float64
     <link href="https://daiyongya.github.io/2017/06/30/%E5%85%B6%E4%BB%96%E6%8C%96%E7%9F%BF%E7%AE%97%E6%B3%95/"/>
     <id>https://daiyongya.github.io/2017/06/30/其他挖矿算法/</id>
     <published>2017-06-30T15:58:50.000Z</published>
-    <updated>2017-11-14T12:38:42.091Z</updated>
+    <updated>2017-11-14T12:38:42.092Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="挖矿算法基本要求"><a href="#挖矿算法基本要求" class="headerlink" title="挖矿算法基本要求"></a>挖矿算法基本要求</h2><p>可以作为挖矿的算法，必须具有以下性质：</p>
@@ -370,7 +370,7 @@ dtype: float64
     <link href="https://daiyongya.github.io/2017/06/30/%E6%AF%94%E7%89%B9%E5%B8%81%E5%88%A9%E7%9B%8A%E7%9B%B8%E5%85%B3%E4%B8%BB%E4%BD%93/"/>
     <id>https://daiyongya.github.io/2017/06/30/比特币利益相关主体/</id>
     <published>2017-06-30T15:48:14.000Z</published>
-    <updated>2017-11-14T12:37:42.138Z</updated>
+    <updated>2017-11-14T12:37:42.139Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="与比特币利益相关方有哪些"><a href="#与比特币利益相关方有哪些" class="headerlink" title="与比特币利益相关方有哪些"></a>与比特币利益相关方有哪些</h2><ul>
@@ -411,7 +411,7 @@ dtype: float64
     <link href="https://daiyongya.github.io/2017/06/27/%E5%8C%BF%E5%90%8D%E6%80%A7/"/>
     <id>https://daiyongya.github.io/2017/06/27/匿名性/</id>
     <published>2017-06-27T15:35:44.000Z</published>
-    <updated>2017-11-14T12:38:36.675Z</updated>
+    <updated>2017-11-14T12:38:36.676Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="匿名常识"><a href="#匿名常识" class="headerlink" title="匿名常识"></a>匿名常识</h2><p>比特币匿名的两种解释：</p>
@@ -583,7 +583,7 @@ dtype: float64
     <link href="https://daiyongya.github.io/2017/06/24/%E6%AF%94%E7%89%B9%E5%B8%81%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/"/>
     <id>https://daiyongya.github.io/2017/06/24/比特币运行机制/</id>
     <published>2017-06-24T15:44:10.000Z</published>
-    <updated>2017-11-14T12:38:14.306Z</updated>
+    <updated>2017-11-14T12:38:14.307Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="比特币的交易"><a href="#比特币的交易" class="headerlink" title="比特币的交易"></a>比特币的交易</h2><p>每笔交易包括输入、输出和唯一的识别ID，其中造币交易没有输入，只有输出，其他每笔交易必须引用币的ID来阐明来源。且每笔交易要么不消耗比特币，要么消耗完比特币，可把剩余的比特币输出给自己的另外一个地址，此时需要地址转换。<br><strong>交易验证</strong>：通过哈希指针来验证交易合法性，输出是否等于上一笔交易的剩余值，是否双重支付等。<br><strong>共同支付</strong>：可两个输入，一个输出，并由两个输入者共同签名进行支付。<br><a id="more"></a><br>交易数据数据结构：</p>
@@ -631,7 +631,7 @@ dtype: float64
     <link href="https://daiyongya.github.io/2017/06/24/%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96/"/>
     <id>https://daiyongya.github.io/2017/06/24/数字货币去中心化/</id>
     <published>2017-06-24T14:49:15.000Z</published>
-    <updated>2017-11-14T12:39:09.843Z</updated>
+    <updated>2017-11-14T12:39:09.844Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="如何判断是否中心化"><a href="#如何判断是否中心化" class="headerlink" title="如何判断是否中心化"></a>如何判断是否中心化</h2><ul>
@@ -708,7 +708,7 @@ dtype: float64
     <link href="https://daiyongya.github.io/2017/06/24/%E5%AF%86%E7%A0%81%E8%B4%A7%E5%B8%81%E6%A6%82%E8%BF%B0/"/>
     <id>https://daiyongya.github.io/2017/06/24/密码货币概述/</id>
     <published>2017-06-24T14:08:22.000Z</published>
-    <updated>2017-11-14T12:38:31.493Z</updated>
+    <updated>2017-11-14T12:38:31.494Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="密码学之哈希函数"><a href="#密码学之哈希函数" class="headerlink" title="密码学之哈希函数"></a>密码学之哈希函数</h2><p><strong>定义</strong>：输入为任意位数数值，经过某一函数后，输出为固定位数数值，这个函数必须具有以下三大特性：</p>
@@ -771,7 +771,7 @@ dtype: float64
     <link href="https://daiyongya.github.io/2017/06/06/%E5%9B%BD%E5%86%85%E5%8C%BA%E5%9F%9F%E9%93%BE%E6%8A%80%E6%9C%AF%E6%83%85%E5%86%B5/"/>
     <id>https://daiyongya.github.io/2017/06/06/国内区域链技术情况/</id>
     <published>2017-06-06T13:12:04.000Z</published>
-    <updated>2017-11-14T12:38:19.621Z</updated>
+    <updated>2017-11-14T12:38:19.622Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="国内实验室分布情况"><a href="#国内实验室分布情况" class="headerlink" title="国内实验室分布情况"></a>国内实验室分布情况</h2><ul>
@@ -819,7 +819,7 @@ dtype: float64
     <link href="https://daiyongya.github.io/2017/06/03/%E5%A6%82%E4%BD%95%E8%AF%81%E6%98%8E%E4%BD%A0%E5%A6%88%E6%98%AF%E4%BD%A0%E5%A6%88/"/>
     <id>https://daiyongya.github.io/2017/06/03/如何证明你妈是你妈/</id>
     <published>2017-06-03T14:10:48.000Z</published>
-    <updated>2017-11-14T12:39:03.426Z</updated>
+    <updated>2017-11-14T12:39:03.427Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="问题的提出"><a href="#问题的提出" class="headerlink" title="问题的提出"></a>问题的提出</h2><p>貌似记得是亲民的总理提出，需要简化行政手续，减少证明你妈是你妈的问题，由此热议了一段时间。最近两天几天新闻又爆料某女士需要证明她妈是她妈，作为入住GITHUB的第一篇博客，浅谈下个人看法。<br><a id="more"></a></p>
