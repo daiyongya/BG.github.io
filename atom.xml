@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://daiyongya.github.io/"/>
-  <updated>2018-06-15T18:37:50.857Z</updated>
+  <updated>2018-06-15T18:40:06.246Z</updated>
   <id>https://daiyongya.github.io/</id>
   
   <author>
@@ -20,12 +20,12 @@
     <link href="https://daiyongya.github.io/2018/06/15/Gibbs%20sampling/"/>
     <id>https://daiyongya.github.io/2018/06/15/Gibbs sampling/</id>
     <published>2018-06-14T16:28:06.000Z</published>
-    <updated>2018-06-15T18:37:50.857Z</updated>
+    <updated>2018-06-15T18:40:06.246Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="Bayesian-linear-regression"><a href="#Bayesian-linear-regression" class="headerlink" title="Bayesian linear regression"></a>Bayesian linear regression</h2><p>此实例为吉布斯采样基于线性回归的实现。<a id="more"></a></p>
 <p>假设我们已经知道实数对$(y_i,x_i),i=1,\cdots,N$，以及$y_i \sim \mathcal{N}(\beta_0+\beta_1 x_i,1/\tau)$,根据分布的性质，也可以写成另外一种形式:<br>$$y_i=\beta_0+\beta_1 x_i+\epsilon,\epsilon \sim \mathcal{N}(0,1/\tau )$$<br>假设观察到的实数对相互独立的产生于同一个分布，其似然函数可以写成：</p>
-<p>$$<br>L(y_1,\cdots,y_n,x_1,\cdots,x_n \setminus \beta_0,\beta<em>1,\tau)<br>=\prod</em>{i=1}^N\mathcal{N}(\beta_0+\beta_1 x_i,1/\tau)<br>$$</p>
+<p>$$<br>L(y_1,\cdots,y_n,x_1,\cdots,x_n \setminus \beta_0,\beta<em>1,\tau) \\<br>=\prod</em>{i=1}^N\mathcal{N}(\beta_0+\beta_1 x_i,1/\tau)<br>$$</p>
 <p>为了便于计算，我们对参数取共轭先验：</p>
 <p>$$<br>\beta_0 \sim \mathcal{N}(\mu_0,1/\tau_0),<br>\beta_1 \sim \mathcal{N}(\mu_1,1/\tau_1),<br>\tau \sim \Gamma(\alpha,\beta)<br>$$<br>这里有详细的slices推导，<a href="http://www.cs.toronto.edu/~radford/csc2541.S11/week3.pdf" target="_blank" rel="external">请点击</a></p>
 <h2 id="Gibbs基本方法介绍"><a href="#Gibbs基本方法介绍" class="headerlink" title="Gibbs基本方法介绍"></a>Gibbs基本方法介绍</h2><p>我们有两个参数, $\theta_1,\theta_2$，以及观测数据$x$，为了找到后验概率$p (\theta_1,\theta_2 \setminus x)$，我们做以下操作：</p>
