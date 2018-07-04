@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://daiyongya.github.io/"/>
-  <updated>2018-06-16T15:58:40.130Z</updated>
+  <updated>2018-07-04T15:45:44.166Z</updated>
   <id>https://daiyongya.github.io/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CCF-GAIR 全球人工智能与机器人峰会简记</title>
+    <link href="https://daiyongya.github.io/2018/06/15/CCF-GAIR/"/>
+    <id>https://daiyongya.github.io/2018/06/15/CCF-GAIR/</id>
+    <published>2018-06-14T16:28:06.000Z</published>
+    <updated>2018-07-04T15:45:44.166Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<h2 id="记录原因"><a href="#记录原因" class="headerlink" title="记录原因"></a>记录原因</h2><p>6.29，6.30,7.1CCF-GAIR举办全球人工智能与机器人大会，有幸参与，简笔备份与此。<a id="more"></a></p>
+<h2 id="学术观点"><a href="#学术观点" class="headerlink" title="学术观点"></a>学术观点</h2><h3 id="张钹院士"><a href="#张钹院士" class="headerlink" title="张钹院士"></a>张钹院士</h3><p>人工智能还处于很傻阶段，不具备推理能力，只能处理无歧义数据。深度学习，比如图像识别，虽然能判别图像，但是却不能识别图像，暂时无法达到真正的人工智能。</p>
+<p>特征学习学习到了特征，往往不能学习到语义，需要把特征映射到语义空间，然后建立总体处理框架，达到数据驱动结合知识驱动。</p>
+<h3 id="张建伟（德国汉堡大学）"><a href="#张建伟（德国汉堡大学）" class="headerlink" title="张建伟（德国汉堡大学）"></a>张建伟（德国汉堡大学）</h3><p>机器人无三观，数据也无三观，需要人赋予三观偏向。</p>
+<p>情感学习是自然语言处理的明珠。</p>
+<h3 id="马毅（加州大学伯克利分校）"><a href="#马毅（加州大学伯克利分校）" class="headerlink" title="马毅（加州大学伯克利分校）"></a>马毅（加州大学伯克利分校）</h3><p>现今的深度图像识别虽然识别率很高，但是只需要加一点点噪声便完全无法识别，鲁棒性太差。深度学习本质上学习的是subspace特性及低秩特性。</p>
+<h3 id="沈定刚（北卡罗来纳大学）"><a href="#沈定刚（北卡罗来纳大学）" class="headerlink" title="沈定刚（北卡罗来纳大学）"></a>沈定刚（北卡罗来纳大学）</h3><p>医学智能需要融合到医生诊断过程中去，协助诊疗而不是取代医生，也无法取代。</p>
+<h3 id="孙茂松（清华大学）"><a href="#孙茂松（清华大学）" class="headerlink" title="孙茂松（清华大学）"></a>孙茂松（清华大学）</h3><p>中文处理需要加入专家知识，不能仅仅依靠深度学习而抛弃之前已经很成熟的专家知识系统。在自然语言处理中，词的向量出现歧义时，可加入字的向量，相当于平滑作用。关于低频词及新词，可利用hownet义元来解决中文词语多义性，wordnet可用来加强英语的多义性学习。</p>
+<p>古诗系统涉及到相关性和语义相等性，未来将学习世界知识，关注情感学习，以增强作诗系统。</p>
+<h3 id="赵军（中科院自动化所）"><a href="#赵军（中科院自动化所）" class="headerlink" title="赵军（中科院自动化所）"></a>赵军（中科院自动化所）</h3><p>事件图谱以事件为节点，开放域关系抽取，基于句法，基于知识监督，结论是，知识监督可以在具体场景中取得满意效果。</p>
+<h3 id="秦兵（哈工大）"><a href="#秦兵（哈工大）" class="headerlink" title="秦兵（哈工大）"></a>秦兵（哈工大）</h3><p>情感学习是自然语言处理的未来。</p>
+<h3 id="胡侠（德州农工）"><a href="#胡侠（德州农工）" class="headerlink" title="胡侠（德州农工）"></a>胡侠（德州农工）</h3><p>系统需要更好的可解释性，异常检测也需要更好的可解释性，用户不会为不可解释性买单。</p>
+<h2 id="投资人专场"><a href="#投资人专场" class="headerlink" title="投资人专场"></a>投资人专场</h2><p>程浩（迅雷创始人，远望资本联合创始人）关于创业的五个思考：<br>1.是否刚需或者高频。如何判断刚需？是否极大提高效率，是否极大降低成本，是否极大提高用户体验，注意极大这个词。<br>2.市场容量和趋势。市场容量有多大，自己能做到百分之多少，市场处于什么阶段，是朝阳还是夕阳产业？<br>3.怎么赚钱，即商业模式。<br>4.为什么是你？需要knowhow，把我用户需求，需要清楚自己的创业初心，是赚快钱还是想做一个伟大的公司<br>5.护城河在哪里？是否具备网络指数级增长效应？是否具有钢柱效应？是否是技术优先？是否具有规模效应或者规模优势？</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h2 id=&quot;记录原因&quot;&gt;&lt;a href=&quot;#记录原因&quot; class=&quot;headerlink&quot; title=&quot;记录原因&quot;&gt;&lt;/a&gt;记录原因&lt;/h2&gt;&lt;p&gt;6.29，6.30,7.1CCF-GAIR举办全球人工智能与机器人大会，有幸参与，简笔备份与此。
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://daiyongya.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="机器学习" scheme="https://daiyongya.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>Linear regression based on Gibbs sampling</title>
